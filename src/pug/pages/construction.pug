@@ -1,0 +1,96 @@
+
+extends ../layout/main
+block variable
+  -
+    var title_page = 'construction'
+    var id_page = 'id-page-construction'
+    var class_page = 'class-page-construction'
+    var breadcrumbsSubitem = [
+      {
+        label: 'Хід будівництва',
+        link: pagesLink[0].construction
+      }
+    ]
+
+block meta
+  title= title_page
+  meta(name='description', content='')
+block head
+    link(rel='stylesheet', href="./assets/styles/main.min.css")
+block scripts
+  script(defer src='./assets/scripts/vendors.bundle.js')
+  script(defer src='./assets/scripts/index.bundle.js')
+  script(defer src='./assets/scripts/construction.js')
+  script(defer src='./assets/scripts/inner-loader.js')
+
+block content
+  include ../components/breadcrumbs/breadcrumbs
+  .content
+    ul.construction-progress__list
+      li.construction-progress-card
+        .head
+          h4.text-32-white(data-month) ЛИПЕНЬ
+          h5.text-16-grey(data-year) 2023
+        .video
+          <iframe class="video-iframe" width="560" height="315" src="https://www.youtube.com/embed/_Deq3Cf_0lo?si=yWEsWiUub1vPHI-3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        .row
+          p.text-16-grey(data-text) Завдяки злагодженій та організованій роботі будівництво йде швидкими темпами, графік запланованих будівельних робіт суттєво випереджено.
+          a(href="#").btn-style.btn-hover
+            span Дивитися звіт
+            +svg('arrow')
+      li.construction-progress-card
+        .head
+          h4.text-32-white(data-month) ЛИПЕНЬ
+          h5.text-16-grey(data-year) 2023
+        .video
+          <iframe class="video-iframe" width="560" height="315" src="https://www.youtube.com/embed/_Deq3Cf_0lo?si=yWEsWiUub1vPHI-3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        .row
+          p.text-16-grey(data-text) Завдяки злагодженій та організованій роботі будівництво йде швидкими темпами, графік запланованих будівельних робіт суттєво випереджено.
+          a(href="#").btn-style.btn-hover
+            span Дивитися звіт
+            +svg('arrow')
+      li.construction-progress-card
+        .head
+          h4.text-32-white(data-month) ЛИПЕНЬ
+          h5.text-16-grey(data-year) 2023
+        .video
+          <iframe class="video-iframe" width="560" height="315" src="https://www.youtube.com/embed/_Deq3Cf_0lo?si=yWEsWiUub1vPHI-3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        .row
+          p.text-16-grey(data-text) Завдяки злагодженій та організованій роботі будівництво йде швидкими темпами, графік запланованих будівельних робіт суттєво випереджено.
+          a(href="#").btn-style.btn-hover
+            span Дивитися звіт
+            +svg('arrow')
+      li.construction-progress-card
+        .head
+          h4.text-32-white(data-month) ЛИПЕНЬ
+          h5.text-16-grey(data-year) 2023
+        .video
+          <iframe class="video-iframe" width="560" height="315" src="https://www.youtube.com/embed/_Deq3Cf_0lo?si=yWEsWiUub1vPHI-3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        .row
+          p.text-16-grey(data-text) Завдяки злагодженій та організованій роботі будівництво йде швидкими темпами, графік запланованих будівельних робіт суттєво випереджено.
+          a(href="#").btn-style.btn-hover
+            span Дивитися звіт
+            +svg('arrow')
+      li.construction-progress-card
+        .head
+          h4.text-32-white(data-month) ЛИПЕНЬ
+          h5.text-16-grey(data-year) 2023
+        .video
+          <iframe class="video-iframe" width="560" height="315" src="https://www.youtube.com/embed/_Deq3Cf_0lo?si=yWEsWiUub1vPHI-3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        .row
+          p.text-16-grey(data-text) Завдяки злагодженій та організованій роботі будівництво йде швидкими темпами, графік запланованих будівельних робіт суттєво випереджено.
+          a(href="#").btn-style.btn-hover
+            span Дивитися звіт
+            +svg('arrow')
+    .btn-style-2#show-more-button.btn-hover-2
+      span Більше звітів
+      +svg('arrow')
+
+
+
+
+block footer
+  include ../includes/footer.pug
+
+block header
+  include ../includes/header.pug

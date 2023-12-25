@@ -1,0 +1,174 @@
+$default-font: "Almaz-Regular", sans-serif;
+$default-font-2: "Almaz-Bold", sans-serif;
+
+$wc: #FFFFFF;
+$bc: #1D1D1B;
+
+:root {
+  --white: #F1F4FA;
+  --dark-blue: #333740;
+  --blue-secondary: #384562;
+  --gold-primary: #FFD9A1;
+  --gold-secondary: #F8DCB3;
+  --grey: #CFD2D7;
+  --black: #17181B;
+
+  --btn-h: 48px;
+  --btn-circle: 80px;
+
+  --field: 60px;
+
+  --padding-12: 12px;
+  --padding-20: 20px;
+  --padding-24: 24px;
+  --padding-28: 28px;
+  --padding-32: 32px;
+  --padding-36: 36px;
+  --padding-40: 40px;
+  --padding-48: 48px;
+  --padding-60: 60px;
+  --padding-80: 80px;
+
+  --offset-40: 40px;
+  --offset-60: 60px;
+  --offset-100: 100px;
+  --offset-120: 120px;
+  --offset-150: 150px;
+  --offset-200: 200px;
+
+  --header-h-1: 120px;
+  --header-h-2: 100px;
+  --header-offset: 60px;
+
+  --font-14: 14px;
+  --font-15: 15px;
+  --font-16: 16px;
+  --font-20: 20px;
+  --font-24: 24px;
+  --font-32: 32px;
+  --font-60: 60px;
+  --font-96: 96px;
+}
+
+@media screen and (max-width: 1600px){
+  :root {
+    --btn-h: 42px;
+    --btn-circle: 60px;
+
+    --field: 40px;
+
+    --padding-12: 12px;
+
+    --padding-20: 16px;
+    --padding-24: 24px;
+    --padding-28: 20px;
+    --padding-32: 24px;
+    --padding-36: 30px;
+    --padding-40: 28px;
+    --padding-48: 36px;
+    --padding-60: 40px;
+    --padding-80: 80px;
+
+    --offset-40: 40px;
+    --offset-60: 40px;
+    --offset-100: 50px;
+    --offset-120: 100px;
+    --offset-150: 100px;
+    --offset-200: 100px;
+
+    --header-h-1: 67px;
+    --header-h-2: 60px;
+    --header-offset: 40px;
+
+    --font-14: 13px;
+    --font-15: 14px;
+    --font-16: 15px;
+    --font-20: 20px;
+    --font-24: 20px;
+    --font-32: 24px;
+    --font-60: 48px;
+    --font-96: 72px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  :root {
+    --btn-h: 42px;
+    --btn-circle: 60px;
+
+    --field: 24px;
+
+    --padding-12: 12px;
+
+    --padding-20: 16px;
+    --padding-24: 16px;
+    --padding-28: 20px;
+    --padding-32: 24px;
+    --padding-36: 30px;
+    --padding-40: 28px;
+    --padding-48: 36px;
+    --padding-60: 40px;
+    --padding-80: 80px;
+
+    --offset-40: 40px;
+    --offset-60: 40px;
+    --offset-100: 30px;
+    --offset-120: 100px;
+    --offset-150: 100px;
+    --offset-200: 100px;
+
+    --header-h-1: 60px;
+    --header-h-2: 60px;
+    --header-offset: 24px;
+
+    --font-14: 13px;
+    --font-15: 14px;
+    --font-16: 15px;
+    --font-20: 20px;
+    --font-24: 20px;
+    --font-32: 24px;
+    --font-60: 36px;
+    --font-96: 58px;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  :root {
+    --btn-h: 42px;
+    --btn-circle: 60px;
+
+    --field: 20px;
+
+    --padding-12: 12px;
+
+    --padding-20: 16px;
+    --padding-24: 16px;
+    --padding-28: 20px;
+    --padding-32: 24px;
+    --padding-36: 30px;
+    --padding-40: 28px;
+    --padding-48: 28px;
+    --padding-60: 40px;
+    --padding-80: 80px;
+
+    --offset-40: 40px;
+    --offset-60: 40px;
+    --offset-100: 30px;
+    --offset-120: 40px;
+    --offset-150: 40px;
+    --offset-200: 80px;
+
+    --header-h-1: 60px;
+    --header-h-2: 60px;
+    --header-offset: 12px;
+
+    --font-14: 13px;
+    --font-15: 14px;
+    --font-16: 15px;
+    --font-20: 20px;
+    --font-24: 20px;
+    --font-32: 24px;
+    --font-60: 30px;
+    --font-96: 36px;
+  }
+}

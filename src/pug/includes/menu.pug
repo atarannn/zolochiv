@@ -1,0 +1,28 @@
+-
+  var menu = [
+    ['Головна', 'index.html', 'Головна'],
+    ['Генплан', '3d.html', 'Генплан'],
+    ['Котеджі', 'cottages.html', 'Котеджі'],
+    ['Хід будівництва', 'construction.html', 'Хід будівництва'],
+    ['Рішення під ключ', 'turnkey-solution.html', 'Рішення під ключ'],
+    ['Технології', 'technologies.html', 'Технології'],
+    ['Девелопер', 'developer.html', 'Девелопер'],
+    ['Контакти', 'contacts.html', 'Контакти']
+  ]
+
+.menu(data-menu)
+  img(src='./assets/images/menu/decor-1.svg').decor-1
+  img(src='./assets/images/menu/decor-2.svg').decor-2
+  .menu-header
+    .menu-close-wrapper(data-close-menu).menu-hover
+      span.text-14-gold закрити
+      .menu-close
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+        <path d="M15 15L1 1M1 15L15 1L1 15Z" stroke="#333740" stroke-width="2"/>
+        </svg>
+  .menu-container
+    ul.menu-list
+      each el in menu
+        li(data-animation)
+          a(href=el[1] data-text=el[2]).title-60
+            span=el[0]

@@ -1,0 +1,209 @@
+.footer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--offset-100) var(--field) 0;
+  background: rgba(23, 24, 27, 0.40);
+  position: relative;
+  overflow-x: hidden;
+
+  @include to(1024px) {
+    padding: var(--padding-80) var(--field) 0;
+  }
+
+  .btn-up {
+    &__wrapper {
+      position: absolute;
+      right: var(--field);
+      top: var(--offset-100);
+      cursor: pointer;
+
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+
+      .text-16-gold {
+        margin-right: var(--padding-20);
+
+        @include to(1024px) {
+          display: none;
+        }
+      }
+
+      @include to(1024px) {
+        top: var(--padding-80);
+      }
+    }
+  }
+
+  .decor {
+    position: absolute;
+    right: 0;
+    z-index: 1;
+    pointer-events: none;
+    width: auto;
+    height: auto;
+    bottom: 20%;
+
+    @include to(1600px) {
+      height: 55%;
+    }
+
+    @include to(1024px) {
+      height: 40%;
+      bottom: 30%;
+    }
+
+    @include to(680px) {
+      height: 25%;
+      bottom: 40%;
+    }
+
+    .text-16-gold {
+      @include to(1024px) {
+        display: none;
+      }
+    }
+  }
+
+  &__top {
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-areas: 'nav nav nav nav nav nav nav nav info info info info . . . .';
+    width: 100%;
+
+    @include to(1024px) {
+      grid-template-areas: 'nav nav nav nav nav nav nav . info info info info info info . .';
+    }
+
+    @include to(680px) {
+      grid-template-columns: 1fr;
+      grid-template-areas: 'nav'
+      'info';
+      gap: 60px;
+    }
+
+    .footer__nav {
+      grid-area: nav;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      width: 100%;
+
+      li {
+        .title-60  {
+          text-transform: uppercase;
+        }
+
+        @include to(1024px) {
+          margin-bottom: 8px;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+
+    .footer__info {
+      grid-area: info;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      width: 100%;
+
+      &-item {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        width: 100%;
+        margin-bottom: var(--padding-48);
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        &__title {
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          margin-bottom: var(--padding-12);
+
+          .text-16-gold {
+            text-align: left;
+            cursor: default;
+          }
+
+          span {
+            margin-left: var(--padding-12);
+            height: 1px;
+            width: 100%;
+            background: var(--gold-primary);
+            cursor: default;
+          }
+        }
+
+        .text-24-grey {
+          margin-bottom: 8px;
+        }
+
+        &__row {
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+
+          @include to(1024px) {
+            flex-wrap: wrap;
+          }
+
+          .text-24-grey {
+            margin-right: var(--padding-28);
+          }
+        }
+      }
+    }
+  }
+
+  &__bottom {
+    --logo-h: 65px;
+
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-areas: '. . . . . . . . text text text text . . . .';
+    align-content: flex-start;
+    width: 100%;
+    height: var(--logo-h);
+    position: relative;
+    margin-top: var(--offset-100);
+
+    @include to(1024px) {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      margin-top: var(--padding-80);
+    }
+
+    .text-16-grey {
+      grid-area: text;
+      cursor: default;
+
+      @include to(680px) {
+        width: 50%;
+      }
+    }
+
+    .smarto-logo {
+      height: var(--logo-h);
+      width: auto;
+      position: absolute;
+      right: calc(-1 * var(--field) + 20px);
+      bottom: 0;
+    }
+  }
+}

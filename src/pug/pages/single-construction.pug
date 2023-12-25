@@ -1,0 +1,113 @@
+
+extends ../layout/main
+block variable
+  -
+    var title_page = 'single-construction'
+    var id_page = 'id-page-single-construction'
+    var class_page = 'class-page-single-construction'
+    var breadcrumbsSubitem = [
+      {
+        label: 'single-construction',
+        link: pagesLink[0].single-construction
+      }
+    ]
+
+block meta
+  title= title_page
+  meta(name='description', content='')
+block head
+    link(rel='stylesheet', href="./assets/styles/main.min.css")
+block scripts
+  script(defer src='./assets/scripts/vendors.bundle.js')
+  script(defer src='./assets/scripts/index.bundle.js')
+  script(defer src='./assets/scripts/libs.js')
+  script(defer src='./assets/scripts/single-construction.js')
+  script(defer src='./assets/scripts/inner-loader.js')
+
+block content
+  .breadcrumbs-wrapper
+    .breadcrumbs
+        .breadcrumbs-title
+          .left
+          .title-96 Липень 2023
+          .right
+        .breadcrumbs-bottom
+          a(href="index.html").text-16-gold Головна
+          +svg('arrow')
+          a(href=" construction.html").text-16-gold Хід будівництва
+          +svg('arrow')
+          .text-16-grey Липень 2023
+  .content
+    .single-construction__wrapper
+      .single-construction__btn-back#back-btn
+        p.text-14-gold Назад
+        .swiper-btn
+          +svg('arrow-up')
+      .single-construction__text
+        p.text-16-grey На сьогодні вже введені в експлуатацію, приймають гостей та приносять власникам пасивний дохід перші два будинки апарт-готелю.
+        ul.text-16-grey Зараз тривають роботи над зведенням третього будинку:
+          li Монолітний каркас вже залили на 80 відсотків.
+          li Зовнішні стіни виконали на 50%.
+          li Внутрішні стіни та перегородки влаштували на 15%
+          li Сходові марші та майданчики залиті до рівня восьмого поверху.
+          li В будинку розпочали влаштування металопластикових вікон.
+      .single-construction__swiper.swiper-container
+        .single-construction__swiper-btn
+          .swiper-btn(data-prev-btn-section).data-prev-btn
+            +svg('arrow-up')
+          .swiper-btn(data-next-btn-section).data-next-btn
+            +svg('arrow-up')
+        .swiper-wrapper
+          .swiper-slide
+            img(src='./assets/images/home/slider-3/1.jpg' alt='img')
+          .swiper-slide
+            img(src='./assets/images/home/slider-3/2.jpg' alt='img')
+          .swiper-slide
+            img(src='./assets/images/home/slider-3/3.jpg' alt='img')
+          .swiper-slide
+            img(src='./assets/images/home/slider-3/4.jpg' alt='img')
+          .swiper-slide
+            img(src='./assets/images/home/slider-3/1.jpg' alt='img')
+          .swiper-slide
+            img(src='./assets/images/home/slider-3/1.jpg' alt='img')
+      .single-construction__video
+        h5.title-60 Відеозвіт з будівництва
+        .video
+          <iframe class="video-iframe" width="560" height="315" src="https://www.youtube.com/embed/_Deq3Cf_0lo?si=yWEsWiUub1vPHI-3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    .last-construction
+      .last-construction__title
+        .left
+        .title-96 Останні звіти
+        .right
+      .construction-progress__list
+        li.construction-progress-card
+          .head
+            h4.text-32-white(data-month) ЛИПЕНЬ
+            h5.text-16-grey(data-year) 2023
+          .video
+            <iframe class="video-iframe" width="560" height="315" src="https://www.youtube.com/embed/_Deq3Cf_0lo?si=yWEsWiUub1vPHI-3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          .row
+            p.text-16-grey(data-text) Завдяки злагодженій та організованій роботі будівництво йде швидкими темпами, графік запланованих будівельних робіт суттєво випереджено.
+            a(href="#").btn-style.btn-hover
+              span Дивитися звіт
+              +svg('arrow')
+        li.construction-progress-card
+          .head
+            h4.text-32-white(data-month) ЛИПЕНЬ
+            h5.text-16-grey(data-year) 2023
+          .video
+            <iframe class="video-iframe" width="560" height="315" src="https://www.youtube.com/embed/_Deq3Cf_0lo?si=yWEsWiUub1vPHI-3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          .row
+            p.text-16-grey(data-text) Завдяки злагодженій та організованій роботі будівництво йде швидкими темпами, графік запланованих будівельних робіт суттєво випереджено.
+            a(href="#").btn-style.btn-hover
+              span Дивитися звіт
+              +svg('arrow')
+
+
+
+
+block footer
+  include ../includes/footer.pug
+
+block header
+  include ../includes/header.pug

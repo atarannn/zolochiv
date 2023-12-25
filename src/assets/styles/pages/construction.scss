@@ -1,0 +1,127 @@
+[id*="construction"] {
+  .page__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    #show-more-button {
+      margin: var(--offset-120) auto;
+
+      svg {
+        transform: rotate(90deg);
+      }
+    }
+  }
+}
+
+.construction-progress__list {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  @include to(1024px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .construction-progress-card {
+    //display: flex;
+    //flex-direction: column;
+    //align-items: flex-start;
+    //justify-content: flex-start;
+    display: grid;
+    grid-auto-rows: auto auto 1fr;
+    border: 1px solid var(--blue-secondary);
+    padding: var(--padding-60) calc(var(--padding-60) + var(--padding-20));
+    border-top: none;
+
+    &:first-child {
+      border-top: 1px solid var(--blue-secondary);
+    }
+
+    &:nth-child(2) {
+      border-top: 1px solid var(--blue-secondary);
+
+      @include to(1024px) {
+        border-top: none;
+      }
+    }
+
+    &:nth-child(odd) {
+      border-right: none;
+
+      @include to(1024px) {
+        border-right: 1px solid var(--blue-secondary);
+      }
+    }
+
+    @include to(680px) {
+      padding: var(--padding-60) var(--padding-28);
+    }
+
+    &.card-hidden {
+      display: none;
+    }
+
+    .head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: default;
+      width: 100%;
+      margin-bottom: var(--padding-28);
+      padding-bottom: var(--padding-28);
+      border-bottom: 1px dashed var(--gold-primary);
+    }
+
+    .video, .img {
+      width: 100%;
+      height: var(--construction-iframe);
+      position: relative;
+      border-radius: 4px;
+      overflow: hidden;
+
+      iframe, img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .row {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      width: 100%;
+      height: auto;
+      margin-top: var(--padding-28);
+      padding-bottom: var(--padding-28);
+      border-bottom: 1px dashed var(--gold-primary);
+
+      @include to(680px) {
+        flex-direction: column;
+        justify-content: flex-start;
+      }
+
+      .text-16-grey {
+        width: 60%;
+        text-align: left;
+        cursor: default;
+
+        @include to(1024px) {
+          width: 65%;
+        }
+
+        @include to(680px) {
+          width: 100%;
+          margin-bottom: var(--padding-28);
+        }
+      }
+
+      .btn-style {
+        @include to(680px) {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

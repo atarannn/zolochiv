@@ -1,0 +1,45 @@
+
+extends ../layout/main
+block variable
+  -
+    var title_page = '404'
+    var id_page = 'id-page-404'
+    var class_page = 'class-page-404'
+    var breadcrumbsSubitem = [
+      {
+        label: '404',
+        link: pagesLink[0].error
+      }
+    ]
+
+block meta
+  title= title_page
+  meta(name='description', content='')
+block head
+  link(rel='stylesheet', href="./assets/styles/main.min.css")
+block scripts
+  script(defer src='./assets/scripts/vendors.bundle.js')
+  script(defer src='./assets/scripts/index.bundle.js')
+  script(defer src='./assets/scripts/libs.js')
+  script(defer src='./assets/scripts/404.js')
+
+block content
+  img(src='./assets/images/404/decor.svg' alt='img').decor-404
+  .page-404
+    img(src='./assets/images/404/svg.svg' alt='img').img
+    .page-404__info
+      .page-404__info-title 404
+      .title-60 упс, Щось пішло не так...
+      .row
+        #go-back.go-back.btn-style.btn-hover
+          span Повернутися назад
+          +svg('arrow')
+        a(href="index.html").btn-style.btn-hover
+          span На головну
+          +svg('arrow')
+
+block footer
+  include ../includes/footer.pug
+
+block header
+  include ../includes/header.pug

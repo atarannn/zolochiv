@@ -1,0 +1,132 @@
+
+extends ../layout/main
+block variable
+  -
+    var title_page = 'contacts'
+    var id_page = 'id-page-contacts'
+    var class_page = 'class-page-contacts'
+    var breadcrumbsSubitem = [
+      {
+        label: 'Контакти',
+        link: pagesLink[0].contacts
+      }
+    ]
+
+block meta
+  title= title_page
+  meta(name='description', content='')
+block head
+    link(rel='stylesheet', href="./assets/styles/main.min.css")
+block scripts
+  script(defer src='./assets/scripts/vendors.bundle.js')
+  script(defer src='./assets/scripts/index.bundle.js')
+  script(defer src='./assets/scripts/contacts.bundle.js')
+  script(defer src='./assets/scripts/home-section-2-map.js')
+  script(defer src='./assets/scripts/inner-loader.js')
+
+block content
+  include ../components/breadcrumbs/breadcrumbs
+  .content
+    section.home-section-2
+      .home-section-2__info
+        .home-section-2__info-item
+          .home-section-2__info-item__title
+            h5.title-60#num-1 0
+            p.text-16-grey хвилин
+          p.text-16-grey до метро Бориспільська
+          .row
+            img(src='./assets/images/home/section-2/svg-1.svg' alt='img').svg
+            .line
+              img(src='./assets/images/home/section-2/svg-arrow.svg' alt='img').arrow
+            .text-14-gold 6 км
+        .home-section-2__info-item
+          .home-section-2__info-item__title
+            h5.title-60#num-2 0
+            p.text-16-grey хвилин
+          p.text-16-grey до Сільпо
+          .row
+            img(src='./assets/images/home/section-2/svg-1.svg' alt='img').svg
+            .line
+              img(src='./assets/images/home/section-2/svg-arrow.svg' alt='img').arrow
+            .text-14-gold 5 км
+        .home-section-2__info-item
+          .home-section-2__info-item__title
+            h5.title-60#num-3 0
+            p.text-16-grey хвилин
+          p.text-16-grey до центру Києва
+          .row
+            img(src='./assets/images/home/section-2/svg-1.svg' alt='img').svg
+            .line
+              img(src='./assets/images/home/section-2/svg-arrow.svg' alt='img').arrow
+            .text-14-gold 5 км
+        .home-section-2__info-item
+          .home-section-2__info-item__title
+            h5.title-60#num-4 0
+            p.text-16-grey хвилин
+          p.text-16-grey до річки
+          .row
+            img(src='./assets/images/home/section-2/svg-2.svg' alt='img').svg
+            .line
+              img(src='./assets/images/home/section-2/svg-arrow.svg' alt='img').arrow
+            .text-14-gold 100 м
+      .home-section-2__map
+        img(src='./assets/images/home/section-2/branch-bottom-left.svg' alt='img').decor-bottom-left
+        img(src='./assets/images/home/section-2/branch-top-left.svg' alt='img').decor-top-left
+        img(src='./assets/images/home/section-2/branch-bottom-right.svg' alt='img').decor-bottom-right
+        img(src='./assets/images/home/section-2/branch-top-1-right.svg' alt='img').decor-top-1-right
+        img(src='./assets/images/home/section-2/branch-top-2-right.svg' alt='img').decor-top-2-right
+        img(src='./assets/images/home/section-2/branch-mobile.svg' alt='img').decor-mobile
+        .map-wrapper
+          #map.map
+    section.home-section-13
+      .home-section-13__info
+        img(src='./assets/images/home/section-13/decor.svg' alt='img').decor
+        .home-section-13__info-item
+          h5.text-14-gold Відділ інвестицій:
+          a(href="tel:+380985707070").text-24-white
+            span +38 (098) 570-70-70
+        .home-section-13__info-item
+          h5.text-14-gold Наша адреса:
+          p.text-24-white Лівий берег Києва, село Гнідин
+          a(href="#").btn-style.btn-hover
+            span Прокласти маршрут
+            +svg('arrow')
+        .home-section-13__info-item
+          h5.text-14-gold Соц мережі:
+          .row
+            a(href="#").text-24-white
+              span telegram
+            a(href="#").text-24-white
+              span viber
+            a(href="#").text-24-white
+              span facebook
+        .home-section-13__info-item
+          h5.text-14-gold E-mail:
+          a(href="mailto:info@dfd.house").text-24-white
+            span info@dfd.house
+      form(data-contacts-form autocomplete="off").home-form
+        img(src='./assets/images/form/decor-1.svg' alt='img').decor-1
+        .form-title
+          .text-32-white Залишились запитання?
+          .text-16-grey Ми відповімо на все, що вас турбує
+        .form-field__wrapper
+          .form-field.form-field-input(data-field-input data-field-name data-status="field--inactive")
+            .input-title Ваше ім'я:
+            input(type='text' name="name" placeholder="Ім'я").form-field__input
+            .input-message(data-input-message)
+          .form-field.disabled.form-field-input(data-field-input data-field-phone data-status="field--inactive")
+            .input-title Ваш номер:
+            input(type='text' name="phone" placeholder="Телефон").form-field__input
+            .mask-absolute.js-mask-absolute + 380 __-___-__-__
+            .input-message(data-input-message)
+          button( type="submit" data-btn-submit).submit-btn.btn-style.btn-hover
+            span(data-btn-submit-text) Задати запитання
+            +svg('arrow').svg
+
+
+block footer
+  include ../includes/footer.pug
+
+block header
+  include ../includes/header.pug
+  include ../includes/form-thanks.pug

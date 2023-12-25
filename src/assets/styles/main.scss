@@ -1,0 +1,33 @@
+@import './assets/vars';  // переменные
+@import './assets/smart-grid';  // mixins smartgrid.js
+// libraries
+@import './libs';
+
+// assets
+@import './assets/mixins';  // миксины
+@import './assets/fonts';  // шрифты
+@import './assets/base';  // общие стили
+@import './assets/animation';  // анимации
+@import './assets/interface'; // main style
+
+// sass
+@import './header';
+@import './menu';
+@import './footer';
+@import './loader';
+@import './popup';
+
+@import '../../pug/components/form/form';
+@import '../../pug/components/lang/lang';
+@import '../../pug/components/breadcrumbs/breadcrumbs';
+@import '../../pug/components/toster/toster';
+
+@import './pages/404';
+@import './pages/home';
+@import './pages/construction';
+@import './pages/single-construction';
+@import './pages/cottages';
+@import './pages/contacts';
+@import './pages/developer';
+@import './pages/turnkey-solution';
+@import './pages/technologies';

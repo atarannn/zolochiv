@@ -1,0 +1,150 @@
+
+extends ../layout/main
+block variable
+  -
+    var title_page = 'cottages'
+    var id_page = 'id-page-cottages'
+    var class_page = 'class-page-cottages'
+    var breadcrumbsSubitem = [
+      {
+        label: 'Котеджі',
+        link: pagesLink[0].cottages
+      }
+    ]
+
+block meta
+  title= title_page
+  meta(name='description', content='')
+block head
+    link(rel='stylesheet', href="./assets/styles/main.min.css")
+block scripts
+  script(defer src='./assets/scripts/vendors.bundle.js')
+  script(defer src='./assets/scripts/index.bundle.js')
+  script(defer src='./assets/scripts/cottages.bundle.js')
+  script(defer src='./assets/scripts/inner-loader.js')
+
+
+block content
+  include ../components/breadcrumbs/breadcrumbs
+  .content
+    section.home-section-5
+      .home-section-5__list
+        .home-section-5__list-item
+          .mask
+          img(src='./assets/images/home/section-5/1.jpg' alt='img').img
+          .home-section-5__list-item__top
+            .info
+              span.text-16-white 3
+              span.text-16-white Спальні
+            .info
+              span.text-16-white 3
+              span.text-16-white Гардероби
+            .info
+              span.text-16-white 2
+              span.text-16-white Санвузла
+            .info
+              span.text-16-white 2
+              span.text-16-white Паркомісця
+          .home-section-5__list-item__bottom
+            .left
+              h4.title-60-gold 6 соток
+              h5.title-96 132 м²
+            .right
+              h6.text-32-white від 216,432 $
+              a(href="#").btn-style.btn-hover
+                span Докладніше
+                +svg('arrow')
+        .home-section-5__list-item
+          .mask
+          img(src='./assets/images/home/section-5/2.jpg' alt='img').img
+          .home-section-5__list-item__top
+            .info
+              span.text-16-white 3
+              span.text-16-white Спальні
+            .info
+              span.text-16-white 3
+              span.text-16-white Гардероби
+            .info
+              span.text-16-white 2
+              span.text-16-white Санвузла
+            .info
+              span.text-16-white 2
+              span.text-16-white Паркомісця
+          .home-section-5__list-item__bottom
+            .left
+              h4.title-60-gold 7 соток
+              h5.title-96 157 м²
+            .right
+              h6.text-32-white від 216,432 $
+              a(href="#").btn-style.btn-hover
+                span Докладніше
+                +svg('arrow')
+        .home-section-5__list-item
+          .mask
+          img(src='./assets/images/home/section-5/3.jpg' alt='img').img
+          .home-section-5__list-item__top
+            .info
+              span.text-16-white 3
+              span.text-16-white Спальні
+            .info
+              span.text-16-white 3
+              span.text-16-white Гардероби
+            .info
+              span.text-16-white 2
+              span.text-16-white Санвузла
+            .info
+              span.text-16-white 2
+              span.text-16-white Паркомісця
+          .home-section-5__list-item__bottom
+            .left
+              h4.title-60-gold 8 соток
+              h5.title-96 177 м²
+            .right
+              h6.text-32-white від 216,432 $
+              a(href="#").btn-style.btn-hover
+                span Докладніше
+                +svg('arrow')
+        .home-section-5__list-item
+          .mask
+          img(src='./assets/images/home/section-5/4.jpg' alt='img').img
+          .home-section-5__list-item__top
+            .info
+              span.text-16-white 3
+              span.text-16-white Спальні
+            .info
+              span.text-16-white 3
+              span.text-16-white Гардероби
+            .info
+              span.text-16-white 2
+              span.text-16-white Санвузла
+            .info
+              span.text-16-white 2
+              span.text-16-white Паркомісця
+          .home-section-5__list-item__bottom
+            .left
+              h4.title-60-gold 9 соток
+              h5.title-96 199 м²
+            .right
+              h6.text-32-white від 216,432 $
+              a(href="#").btn-style.btn-hover
+                span Докладніше
+                +svg('arrow')
+    section.home-section-4
+      .home-section__text
+        h2.title-96 Обрати будинок
+        p.text-24-gold Крок до природи, стрибок до розкоші
+        a(href="#").btn-style-2.btn-hover-2
+          span Дивитися генплан
+          +svg('arrow')
+      .blocks-decor-top
+        img(src='./assets/images/home/decor-svg.svg' alt='img').decor
+      .img__wrapper
+        .img__scale
+          img(src='./assets/images/home/section-4/1.jpg' alt='img').img
+
+
+block footer
+  include ../includes/footer.pug
+
+block header
+  include ../includes/header.pug

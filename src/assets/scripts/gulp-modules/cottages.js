@@ -1,0 +1,1 @@
+import './cottages/cottages-animation'

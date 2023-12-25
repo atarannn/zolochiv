@@ -1,0 +1,535 @@
+
+extends ../layout/main
+block variable
+  -
+    var title_page = 'home'
+    var id_page = 'home-page'
+    var class_page = 'home'
+
+
+block meta
+  title= 'Главная'
+  meta(name='description', content='')
+block head
+    link(rel='stylesheet', href="./assets/styles/main.min.css")
+block scripts
+  script(defer src='./assets/scripts/vendors.bundle.js')
+  script(defer src='./assets/scripts/index.bundle.js')
+  script(defer src='./assets/scripts/libs.js')
+  script(defer src='./assets/scripts/home.bundle.js')
+  script(defer src='./assets/scripts/home-section-2-map.js')
+  script(defer src='./assets/scripts/loader.js')
+
+
+block content
+  section.home-section-1
+    .home-section__text
+      h2.title-96 Золочів Ліс
+      p.text-24-gold Лісова симфонія розкоші поруч з Києвом
+      a(href="#").btn-style-2.btn-hover-2
+        span Дивитися генплан
+        +svg('arrow')
+    .home-section-1__info
+      .home-section-1__info-item.item-1
+        img(src='./assets/images/home/section-1/1.svg' alt='img')
+        .col
+          h3.text-32-white Місце розташування
+          p.text-16-grey 10,5 км або 12 хвилин їзди від м. Бориспільска
+      .home-section-1__info-item.item-2
+        img(src='./assets/images/home/section-1/2.svg' alt='img')
+        .col
+          h3.text-32-white Локація
+          p.text-16-grey Лівий берег Києва, село Гнідин
+      .home-section-1__info-item.item-3
+        img(src='./assets/images/home/section-1/3.svg' alt='img')
+        .col
+          h3.text-32-white Клас
+          p.text-16-grey Преміум
+      .home-section-1__info-item.item-4
+        img(src='./assets/images/home/section-1/4.svg' alt='img')
+        .col
+          h3.text-32-white Вартість
+          p.text-16-grey Від 288,000 $
+
+    .home-section-1__btn-down
+      p.text-14-gold Дізнатися більше
+      .swiper-btn.swiper-btn-hover.swiper-btn-hover
+        +svg('arrow-up')
+    .swiper-container.home-section-1-swiper
+      .home-section-1-swiper-btn
+        .swiper-btn(data-prev-btn-section-1).data-prev-btn.swiper-btn-hover
+          +svg('arrow-up')
+        .swiper-btn(data-next-btn-section-1).data-next-btn.swiper-btn-hover
+          +svg('arrow-up')
+      .swiper-wrapper
+        .swiper-slide
+          img(src='./assets/images/home/slider-1/1.jpg' alt='img')
+        .swiper-slide
+          img(src='./assets/images/home/slider-1/1.jpg' alt='img')
+  section.home-section-2#section-2
+    .home-section__title
+      img(src='./assets/images/home/decor-title.svg' alt='img').decor
+      h2.title-96 Розташування
+    .home-section-2__info
+      .home-section-2__info-item
+        .home-section-2__info-item__title
+          h5.title-60#num-1 0
+          p.text-16-grey хвилин
+        p.text-16-grey до метро Бориспільська
+        .row
+          img(src='./assets/images/home/section-2/svg-1.svg' alt='img').svg
+          .line
+            img(src='./assets/images/home/section-2/svg-arrow.svg' alt='img').arrow
+          .text-14-gold 6 км
+      .home-section-2__info-item
+        .home-section-2__info-item__title
+          h5.title-60#num-2 0
+          p.text-16-grey хвилин
+        p.text-16-grey до Сільпо
+        .row
+          img(src='./assets/images/home/section-2/svg-1.svg' alt='img').svg
+          .line
+            img(src='./assets/images/home/section-2/svg-arrow.svg' alt='img').arrow
+          .text-14-gold 5 км
+      .home-section-2__info-item
+        .home-section-2__info-item__title
+          h5.title-60#num-3 0
+          p.text-16-grey хвилин
+        p.text-16-grey до центру Києва
+        .row
+          img(src='./assets/images/home/section-2/svg-1.svg' alt='img').svg
+          .line
+            img(src='./assets/images/home/section-2/svg-arrow.svg' alt='img').arrow
+          .text-14-gold 5 км
+      .home-section-2__info-item
+        .home-section-2__info-item__title
+          h5.title-60#num-4 0
+          p.text-16-grey хвилин
+        p.text-16-grey до річки
+        .row
+          img(src='./assets/images/home/section-2/svg-2.svg' alt='img').svg
+          .line
+            img(src='./assets/images/home/section-2/svg-arrow.svg' alt='img').arrow
+          .text-14-gold 100 м
+
+    .home-section-2__map
+      img(src='./assets/images/home/section-2/branch-bottom-left.svg' alt='img').decor-bottom-left
+      img(src='./assets/images/home/section-2/branch-top-left.svg' alt='img').decor-top-left
+      img(src='./assets/images/home/section-2/branch-bottom-right.svg' alt='img').decor-bottom-right
+      img(src='./assets/images/home/section-2/branch-top-1-right.svg' alt='img').decor-top-1-right
+      img(src='./assets/images/home/section-2/branch-top-2-right.svg' alt='img').decor-top-2-right
+      img(src='./assets/images/home/section-2/branch-mobile.svg' alt='img').decor-mobile
+      .map-wrapper
+        #map.map
+    form(data-home-form-location autocomplete="off").home-form
+      .form-title
+        .text-32-white Мальовнича локація
+        .text-16-grey Дізнайтеся більше про природу “Золочів Ліс”
+      .form-field__wrapper
+        .form-field.form-field-input(data-field-input data-field-name data-status="field--inactive")
+          .input-title Ваше ім'я:
+          input(type='text' name="name" placeholder="Ім'я").form-field__input
+          .input-message(data-input-message)
+        .form-field.disabled.form-field-input(data-field-input data-field-phone data-status="field--inactive")
+          .input-title Ваш номер:
+          input(type='text' name="phone" placeholder="Телефон").form-field__input
+          .mask-absolute.js-mask-absolute + 380 __-___-__-__
+          .input-message(data-input-message)
+        button( type="submit" data-btn-submit).submit-btn.btn-style.btn-hover
+          span(data-btn-submit-text) Хочу тут жити
+          +svg('arrow').svg
+  section.home-section-3
+    .home-section__title
+      img(src='./assets/images/home/decor-title.svg' alt='img').decor
+      h2.title-96 Галерея
+    .swiper-container.home-section-3-swiper
+      .slider__amount
+        .slider__current(data-current)
+          span(data-first-digit)
+          span(data-second-digit)
+        span.slider__divider /
+        span.slider__all(data-total)
+      .home-section-3-swiper-btn
+        .swiper-btn(data-prev-btn-section-3).data-prev-btn.swiper-btn-hover
+          +svg('arrow-up')
+        .swiper-btn(data-next-btn-section-3).data-next-btn.swiper-btn-hover
+          +svg('arrow-up')
+      .swiper-wrapper
+        .swiper-slide
+          img(src='./assets/images/home/slider-3/decor-1.svg' alt='img').decor
+          img(src='./assets/images/home/slider-3/1.jpg' alt='img').img
+        .swiper-slide
+          img(src='./assets/images/home/slider-3/decor-2.svg' alt='img').decor
+          img(src='./assets/images/home/slider-3/2.jpg' alt='img').img
+        .swiper-slide
+          img(src='./assets/images/home/slider-3/decor-3.svg' alt='img').decor
+          img(src='./assets/images/home/slider-3/3.jpg' alt='img').img
+        .swiper-slide
+          img(src='./assets/images/home/slider-3/decor-4.svg' alt='img').decor
+          img(src='./assets/images/home/slider-3/4.jpg' alt='img').img
+        .swiper-slide
+          img(src='./assets/images/home/slider-3/decor-1.svg' alt='img').decor
+          img(src='./assets/images/home/slider-3/1.jpg' alt='img').img
+        .swiper-slide
+          img(src='./assets/images/home/slider-3/decor-2.svg' alt='img').decor
+          img(src='./assets/images/home/slider-3/2.jpg' alt='img').img
+        .swiper-slide
+          img(src='./assets/images/home/slider-3/decor-3.svg' alt='img').decor
+          img(src='./assets/images/home/slider-3/3.jpg' alt='img').img
+        .swiper-slide
+          img(src='./assets/images/home/slider-3/decor-4.svg' alt='img').decor
+          img(src='./assets/images/home/slider-3/4.jpg' alt='img').img
+        .swiper-slide
+          img(src='./assets/images/home/slider-3/decor-1.svg' alt='img').decor
+          img(src='./assets/images/home/slider-3/1.jpg' alt='img').img
+        .swiper-slide
+          img(src='./assets/images/home/slider-3/decor-2.svg' alt='img').decor
+          img(src='./assets/images/home/slider-3/2.jpg' alt='img').img
+        .swiper-slide
+          img(src='./assets/images/home/slider-3/decor-3.svg' alt='img').decor
+          img(src='./assets/images/home/slider-3/3.jpg' alt='img').img
+        .swiper-slide
+          img(src='./assets/images/home/slider-3/decor-4.svg' alt='img').decor
+          img(src='./assets/images/home/slider-3/4.jpg' alt='img').img
+  section.home-section-4
+    .home-section__text
+      h2.title-96 Обрати будинок
+      p.text-24-gold Крок до природи, стрибок до розкоші
+      a(href="#").btn-style-2.btn-hover-2
+        span Дивитися генплан
+        +svg('arrow')
+    .blocks-decor-top
+      img(src='./assets/images/home/decor-svg.svg' alt='img').decor
+    .blocks-decor-bottom
+      .swiper-btn.home-section-4__btn-down.swiper-btn-hover
+        +svg('arrow-up')
+    .img__wrapper
+      .img__scale
+        img(src='./assets/images/home/section-4/1.jpg' alt='img').img
+  section.home-section-5#section-5
+    .home-section__title
+      img(src='./assets/images/home/decor-title.svg' alt='img').decor
+      h2.title-96 Котеджі
+    .home-section-5__list
+      .home-section-5__list-item
+        .mask
+        .mobile-block
+          h4.title-60-gold 6 соток
+          h5.title-96 132 м²
+        img(src='./assets/images/home/section-5/1.jpg' alt='img').img
+        .home-section-5__list-item__top
+          .info
+            span.text-16-white 3
+            span.text-16-white Спальні
+          .info
+            span.text-16-white 3
+            span.text-16-white Гардероби
+          .info
+            span.text-16-white 2
+            span.text-16-white Санвузла
+          .info
+            span.text-16-white 2
+            span.text-16-white Паркомісця
+        .home-section-5__list-item__bottom
+          .left
+            h4.title-60-gold 6 соток
+            h5.title-96 132 м²
+          .right
+            h6.text-32-white від 216,432 $
+            a(href="#").btn-style.btn-hover
+              span Докладніше
+              +svg('arrow')
+      .home-section-5__list-item
+        .mask
+        .mobile-block
+          h4.title-60-gold 7 соток
+          h5.title-96 157 м²
+        img(src='./assets/images/home/section-5/2.jpg' alt='img').img
+        .home-section-5__list-item__top
+          .info
+            span.text-16-white 3
+            span.text-16-white Спальні
+          .info
+            span.text-16-white 3
+            span.text-16-white Гардероби
+          .info
+            span.text-16-white 2
+            span.text-16-white Санвузла
+          .info
+            span.text-16-white 2
+            span.text-16-white Паркомісця
+        .home-section-5__list-item__bottom
+          .left
+            h4.title-60-gold 7 соток
+            h5.title-96 157 м²
+          .right
+            h6.text-32-white від 216,432 $
+            a(href="#").btn-style.btn-hover
+              span Докладніше
+              +svg('arrow')
+      .home-section-5__list-item
+        .mask
+        .mobile-block
+          h4.title-60-gold 8 соток
+          h5.title-96 177 м²
+        img(src='./assets/images/home/section-5/3.jpg' alt='img').img
+        .home-section-5__list-item__top
+          .info
+            span.text-16-white 3
+            span.text-16-white Спальні
+          .info
+            span.text-16-white 3
+            span.text-16-white Гардероби
+          .info
+            span.text-16-white 2
+            span.text-16-white Санвузла
+          .info
+            span.text-16-white 2
+            span.text-16-white Паркомісця
+        .home-section-5__list-item__bottom
+          .left
+            h4.title-60-gold 8 соток
+            h5.title-96 177 м²
+          .right
+            h6.text-32-white від 216,432 $
+            a(href="#").btn-style.btn-hover
+              span Докладніше
+              +svg('arrow')
+      .home-section-5__list-item
+        .mask
+        .mobile-block
+          h4.title-60-gold 9 соток
+          h5.title-96 199 м²
+        img(src='./assets/images/home/section-5/4.jpg' alt='img').img
+        .home-section-5__list-item__top
+          .info
+            span.text-16-white 3
+            span.text-16-white Спальні
+          .info
+            span.text-16-white 3
+            span.text-16-white Гардероби
+          .info
+            span.text-16-white 2
+            span.text-16-white Санвузла
+          .info
+            span.text-16-white 2
+            span.text-16-white Паркомісця
+        .home-section-5__list-item__bottom
+          .left
+            h4.title-60-gold 9 соток
+            h5.title-96 199 м²
+          .right
+            h6.text-32-white від 216,432 $
+            a(href="#").btn-style.btn-hover
+              span Докладніше
+              +svg('arrow')
+  section.home-section-6
+    img(src='./assets/images/form/decor-2.svg' alt='img').decor-2
+    img(src='./assets/images/form/decor-3.svg' alt='img').decor-3
+    img(src='./assets/images/form/decor-4.svg' alt='img').decor-4
+    img(src='./assets/images/form/decor-5.svg' alt='img').decor-5
+    form(data-home-form-questions autocomplete="off").home-form
+      img(src='./assets/images/form/decor-1.svg' alt='img').decor-1
+      .form-title
+        .text-32-white Виникли запитання?
+        .text-16-grey Наш відділ продажів допоможе вам
+      .form-field__wrapper
+        .form-field.form-field-input(data-field-input data-field-name data-status="field--inactive")
+          .input-title Ваше ім'я:
+          input(type='text' name="name" placeholder="Ім'я").form-field__input
+          .input-message(data-input-message)
+        .form-field.disabled.form-field-input(data-field-input data-field-phone data-status="field--inactive")
+          .input-title Ваш номер:
+          input(type='text' name="phone" placeholder="Телефон").form-field__input
+          .mask-absolute.js-mask-absolute + 380 __-___-__-__
+          .input-message(data-input-message)
+        button( type="submit" data-btn-submit).submit-btn.btn-style.btn-hover
+          span(data-btn-submit-text) Передзвоніть мені
+          +svg('arrow').svg
+  section.home-section-7
+    .home-section__text-2
+      h2.title-96 Поринь у атмосферу
+    .blocks-decor-top
+      img(src='./assets/images/home/decor-svg.svg' alt='img').decor
+    .video
+      video(loop autoplay muted)
+        source(src="./assets/images/home/section-7/video.mov" type="video/mp4")
+  section.home-section-8
+    .home-section__title
+      img(src='./assets/images/home/decor-title.svg' alt='img').decor
+      h2.title-96 3D шоу-рум
+    .home-section-8__vr-tour
+      .home-section-8__vr-tour__left
+        h4.text-32-white 8 соток
+        h3.title-60-gold 177 м²
+        p.text-16-grey Площа квартири 46,7 м². Містка гардеробна. Кухня площею 15,6 м² із зоною для приготування та споживання улюблених страв. Спальня площею 17,7 м² з ліжком, телевізором, трюмо та зоною для зберігання. Панорамні вікна з виглядом на лісопаркову зону. Скористайтесь функцією 3D-туру квартирою, і Ви впевнитесь у зручності її планування та функціональності.
+      .home-section-8__vr-tour__right(data-panorama-wrapper)
+        iframe(data-panorama src="https://vrnet.io/view5.16a/?model=ua/bmu6/mont_blanc/39,2" preload="none" autoplay="false" muted="" loop="" playsinline="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+        .panorama__faq(data-panorama-faq)
+          img(src="./assets/images/home/section-8/1.jpg").img
+          img(src="./assets/images/home/section-8/icon.svg").icon
+          p.text-24-white Натисніть для перегляду
+  section.home-section-9
+    .home-section__title
+      img(src='./assets/images/home/decor-title.svg' alt='img').decor
+      h2.title-96 Хід будівництва
+    .home-section-9__info
+      .home-section-9__info__construction-item
+        .home-section-9__info__construction-item__left
+          .top
+            h5.text-16-grey(data-year) 2023
+            h4.text-32-white(data-month) ЛИПЕНЬ
+          .center
+            p.text-16-grey(data-text) Завдяки злагодженій та організованій роботі будівництво йде швидкими темпами, графік запланованих будівельних робіт суттєво випереджено.
+          .bottom
+            a(href="#").btn-style.btn-hover
+              span Дивитися звіт
+              +svg('arrow')
+        .home-section-9__info__construction-item__right
+          <iframe id="video-iframe" width="560" height="315" src="https://www.youtube.com/embed/_Deq3Cf_0lo?si=yWEsWiUub1vPHI-3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      a(href="construction.html").home-section-9__info__btn
+        picture
+          source(srcset="./assets/images/home/section-9/border.svg" media="(min-width: 1200px)")
+          img(class="bg" src="./assets/images/home/section-9/border-1200.svg" alt="").border
+        img(src='./assets/images/home/section-9/icon.svg' alt='img').icon
+        img(src='./assets/images/home/section-9/logo.svg' alt='img').logo
+        .btn-style.btn-hover-3
+          span Більше звітів
+          +svg('arrow')
+  section.home-section-10
+    .home-section__title
+      img(src='./assets/images/home/decor-title.svg' alt='img').decor
+      h2.title-96 Переваги
+    .home-section-10__info
+      .home-section-10__info-item
+        img(src='./assets/images/home/section-10/1.svg' alt='img').svg
+        h5.text-24-white Життя посеред лісу
+      .home-section-10__info-item
+        img(src='./assets/images/home/section-10/2.svg' alt='img').svg
+        h5.text-24-white Закрита територія
+      .home-section-10__info-item
+        img(src='./assets/images/home/section-10/3.svg' alt='img').svg
+        h5.text-24-white Охорона 24/7
+      .home-section-10__info-item
+        img(src='./assets/images/home/section-10/4.svg' alt='img').svg
+        h5.text-24-white Енергоефективні будинки
+      .home-section-10__info-item
+        img(src='./assets/images/home/section-10/5.svg' alt='img').svg
+        .col
+          h5.text-24-white Рішення під ключ
+          p.text-16-grey (інженерія, ремонт, ландшафт)
+      .home-section-10__info-item
+        img(src='./assets/images/home/section-10/6.svg' alt='img').svg
+        h5.text-24-white Лісовий Парк
+      .home-section-10__info-item
+        img(src='./assets/images/home/section-10/7.svg' alt='img').svg
+        h5.text-24-white Дитячі майданчики
+      .home-section-10__info-item
+        img(src='./assets/images/home/section-10/8.svg' alt='img').svg
+        h5.text-24-white Зона Ворк-ауту
+      .home-section-10__info-item
+        img(src='./assets/images/home/section-10/9.svg' alt='img').svg
+        h5.text-24-white Природній Зоопарк
+  section.home-section-11
+    .home-section__title.mobile-block
+      img(src='./assets/images/home/decor-title.svg' alt='img').decor
+      h2.title-96 Технології будівництва
+    .home-section-11__img
+      img(src='./assets/images/home/section-11/1.jpg' alt='img')
+      img(src='./assets/images/home/section-11/2.jpg' alt='img')
+      h2.title-96 Технології будівництва
+    .home-section-11__info
+      .text-32-white Давайте подивимося на етапи будівництва та особливості матеріалів та технологій, які ми використовуємо.
+      .row
+        .text-16-grey Ми проектуємо будинки з розрахунком на майбутнє, щоб господареві було менше клопоту з експлуатацією і не треба було витрачати щорічно цілий стан на електроенергію та постійний ремонт. Чим більше продумано моментів на етапі будівництва будинку, тим комфортнішим буде життя після заселення.
+        a(href="#").btn-style.btn-hover
+          span Перейти до розділу
+          +svg('arrow')
+  section.home-section-12
+    .home-section-12-item
+      .home-section__title
+        img(src='./assets/images/home/decor-title.svg' alt='img').decor
+        .title-96
+          h2 Рішення
+          h2 під ключ
+      .home-section-12-item__info
+        .img
+          .mask
+          img(src='./assets/images/home/section-12/1.jpg' alt='img')
+        .row
+          p.text-16-grey Рішення 'під ключ' для тих, хто мріє про беззавадний переїзд у свій новий дім серед лісової гармонії.
+          a(href="#").btn-style.btn-hover
+            span Дізнатися більше
+            +svg('arrow')
+    .home-section-12-item
+      .home-section__title
+        img(src='./assets/images/home/decor-title.svg' alt='img').decor
+        .title-96
+          h2 Девелопер
+          h2 проєкту
+      .home-section-12-item__info
+        .img
+          .mask
+          img(src='./assets/images/home/section-12/2.jpg' alt='img')
+        .row
+          p.text-16-grey DFD – це сімейна компанія-забудовник. ми створюємо містечка для життя в передмісті києва на рівні сша та європи.
+          a(href="#").btn-style.btn-hover
+            span Дізнатися більше
+            +svg('arrow')
+  section.home-section-13
+    .home-section__title
+      img(src='./assets/images/home/decor-title.svg' alt='img').decor
+      h2.title-96 Контакти
+    .home-section-13__info
+      img(src='./assets/images/home/section-13/decor.svg' alt='img').decor
+      .home-section-13__info-item
+        h5.text-14-gold Відділ інвестицій:
+        a(href="tel:+380985707070").text-24-white.link-hover
+          span +38 (098) 570-70-70
+      .home-section-13__info-item
+        h5.text-14-gold Наша адреса:
+        p.text-24-white Лівий берег Києва, село Гнідин
+        a(href="#").btn-style.btn-hover
+          span Прокласти маршрут
+          +svg('arrow')
+      .home-section-13__info-item
+        h5.text-14-gold Соц мережі:
+        .row
+          a(href="#").text-24-white.link-hover
+            span telegram
+          a(href="#").text-24-white.link-hover
+            span viber
+          a(href="#").text-24-white.link-hover
+            span facebook
+      .home-section-13__info-item
+        h5.text-14-gold E-mail:
+        a(href="mailto:info@dfd.house").text-24-white.link-hover
+          span info@dfd.house
+    form(data-home-form-contacts autocomplete="off").home-form
+      img(src='./assets/images/form/decor-1.svg' alt='img').decor-1
+      .form-title
+        .text-32-white Залишились запитання?
+        .text-16-grey Ми відповімо на все, що вас турбує
+      .form-field__wrapper
+        .form-field.form-field-input(data-field-input data-field-name data-status="field--inactive")
+          .input-title Ваше ім'я:
+          input(type='text' name="name" placeholder="Ім'я").form-field__input
+          .input-message(data-input-message)
+        .form-field.disabled.form-field-input(data-field-input data-field-phone data-status="field--inactive")
+          .input-title Ваш номер:
+          input(type='text' name="phone" placeholder="Телефон").form-field__input
+          .mask-absolute.js-mask-absolute + 380 __-___-__-__
+          .input-message(data-input-message)
+        button( type="submit" data-btn-submit).submit-btn.btn-style.btn-hover
+          span(data-btn-submit-text) Задати запитання
+          +svg('arrow').svg
+
+
+block footer
+  include ../includes/footer.pug
+
+block header
+  include ../includes/header.pug
+  include ../includes/form-thanks.pug
+  include ../includes/loader.html
+

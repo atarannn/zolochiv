@@ -1,0 +1,13 @@
+.breadcrumbs-wrapper
+  .breadcrumbs
+    if breadcrumbsSubitem
+      each v in breadcrumbsSubitem
+        .breadcrumbs-title
+          .left
+          .title-96= v.label
+          .right
+        .breadcrumbs-bottom
+          a(href="index.html").text-16-gold Головна
+          +svg('arrow')
+          .text-16-grey= v.label
+

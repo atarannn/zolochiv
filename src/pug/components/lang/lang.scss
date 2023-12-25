@@ -1,0 +1,60 @@
+.lang {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include to(680px) {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  span {
+    color: rgba(255, 217, 161, 0.20);
+    font-size: var(--font-14);
+    margin: 0 var(--padding-12);
+    cursor: default;
+
+    @include to(680px) {
+      display: none;
+    }
+  }
+
+  .lang-item {
+    color: var(--gold-primary);
+    text-align: center;
+    font-family: $default-font;
+    font-size: var(--font-14);
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%; /* 16.8px */
+    text-transform: uppercase;
+
+    a {
+      color: var(--gold-primary);
+      transition: color .3s ease-in-out;
+    }
+
+    &.active {
+      pointer-events: none;
+
+      a {
+        border-bottom: 1px solid var(--gold-primary);
+        padding-bottom: 2px;
+
+        @include to(680px) {
+          padding-bottom: 0;
+          border-bottom: none;
+        }
+      }
+    }
+
+    @include from(1024px) {
+      &:hover {
+        a {
+          color: var(--white);
+          transition: color .3s ease-in-out;
+        }
+      }
+    }
+  }
+}

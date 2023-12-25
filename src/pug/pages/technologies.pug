@@ -1,0 +1,280 @@
+
+extends ../layout/main
+block variable
+  -
+    var title_page = 'technologies'
+    var id_page = 'id-page-technologies'
+    var class_page = 'class-page-technologies'
+    var breadcrumbsSubitem = [
+      {
+        label: 'Технології',
+        link: pagesLink[0].technologies
+      }
+    ]
+
+block meta
+  title= title_page
+  meta(name='description', content='')
+block head
+    link(rel='stylesheet', href="./assets/styles/main.min.css")
+block scripts
+  script(defer src='./assets/scripts/vendors.bundle.js')
+  script(defer src='./assets/scripts/index.bundle.js')
+  script(defer src='./assets/scripts/technologies.js')
+  script(defer src='./assets/scripts/inner-loader.js')
+
+block content
+  include ../components/breadcrumbs/breadcrumbs
+  .content
+    section.technologies-section-1
+      .technologies-section-1__cards
+        .technologies-section-1__card
+          .top 3 тижні
+          h5.text-32-gold Фундамент – утеплена шведська плита
+          ul.technologies-section-1__card__info
+            li.technologies-section-1__card__info__item
+              .row
+                span.text-14-grey 01
+                p.text-24-white У котловані готуємо основу для фундаменту за шарами:
+              ul.list
+                li
+                  span
+                  p.text-16-grey Насипний ґрунт основи
+                li
+                  span
+                  p.text-16-grey Геотекстиль для міцності
+                li
+                  span
+                  p.text-16-grey Утрамбований пісок і щебінь, щоб фундамент не спучив від перепадів температур разом із грунтом
+                li
+                  span
+                  p.text-16-grey Екструдований пінополістирол товщиною 10 см, щоб захистити фундамент знизу від промерзання ґрунту
+                li
+                  span
+                  p.text-16-grey Вимощення, щоб відсікти холод від бетонної основи по периметру
+                li
+                  span
+                  p.text-16-grey Дренажну систему для відведення ґрунтових вод
+
+            li.technologies-section-1__card__info__item
+              .row
+                span.text-14-grey 02
+                p.text-24-white Потім на подушку з утеплювача заливаємо залізобетонну основу.
+            li.technologies-section-1__card__info__item
+              .row
+                span.text-14-grey 03
+                p.text-24-white На цьому етапі прокладаємо інженерні комунікації — розведення під електрику, каналізацію, воду.
+        .technologies-section-1__card
+          .top 5 тижнів
+          h5.text-32-gold Стіни – керамоблок
+          ul.technologies-section-1__card__info
+            li.technologies-section-1__card__info__item
+              .row
+                span.text-14-grey 01
+                p.text-24-white Для стін ми використовуємо керамоблок М100
+              ul.list
+                li
+                  span
+                  p.text-16-grey Це екоматеріал, глина, вона залишається сухою в будь-яку пору року, не схильна до цвілі і грибка.
+                li
+                  span
+                  p.text-16-grey Пустотіла конструкція сприяє звуко- та теплоізоляції.
+        .technologies-section-1__card
+          .top 2 тижні
+          h5.text-32-gold Покрівля – монолітна плита
+          ul.technologies-section-1__card__info
+            li.technologies-section-1__card__info__item
+              .row
+                span.text-14-grey 01
+                p.text-24-white Для цього проекту ми робимо плоский дах із полістиролбетону.
+              ul.list
+                li
+                  span
+                  p.text-16-grey Для міцності ми встановлюємо опори та у стяжці даху робимо подвійний шар армування.
+                li
+                  span
+                  p.text-16-grey Саму форму опалубки для бетонування робимо із вологостійкої фанери та австрійських балок Form-on smartBEAM.
+            li.technologies-section-1__card__info__item
+              .row
+                span.text-14-grey 02
+                p.text-24-white У монолітний дах зручно сховати водостоки, простіше та швидше зробити гідроізоляцію та утеплення.
+            li.technologies-section-1__card__info__item
+              .row
+                span.text-14-grey 03
+                p.text-24-white За бажанням потім на даху можна зробити зону відпочинку.
+        .technologies-section-1__card
+          .top 4 тижні
+          h5.text-32-gold Утеплювач – ППС
+          ul.technologies-section-1__card__info
+            li.technologies-section-1__card__info__item
+              .row
+                span.text-14-grey 01
+                p.text-24-white Для теплоізоляції будинку ми вибрали Пінополістирол від компанії Thermoplast
+              ul.list
+                li
+                  span
+                  p.text-16-grey Neopor виробляється на основі якісного пінополістиролу з додаванням частинок графіту для того, щоб знизити теплопровідність матеріалу і більше герметизувати будинок.
+                li
+                  span
+                  p.text-16-grey Ми хочемо, щоб у процесі експлуатації можна було економічно підтримувати тепло в будинку, без використання систем кондиціювання.
+
+        .technologies-section-1__card
+          .top 2 тижні
+          h5.text-32-gold Вікна та двері теж енергоефективні
+          ul.technologies-section-1__card__info
+            li.technologies-section-1__card__info__item
+              .row
+                span.text-14-grey 01
+                p.text-24-white У нашому проекті великі вікна – панорамні, до підлоги.
+              ul.list
+                li
+                  span
+                  p.text-16-grey Тому встановлюємо 2-камерні склопакети фірми WDS, товщиною 48 мм, заповнені аргоном. З таким склом буде тепло і тихо.
+                li
+                  span
+                  p.text-16-grey Влітку в спеку не буде сильного нагріву, оскільки вони пропускають теплові промені в половину менше, ніж звичайні склопакети.
+                li.li-100
+                  span
+                  p.text-16-grey Профіль 70 мм екологічно чистий, стабілізований на цинку та виготовлений на 100% з первинної сировини.
+
+        .technologies-section-1__card
+          .top 2 тижні
+          h5.text-32-gold Фасад – плитка, ясен, штукатурка
+          ul.technologies-section-1__card__info
+            li.technologies-section-1__card__info__item
+              .row
+                span.text-14-grey 01
+                p.text-24-white Ясен – це зносостійкий та екологічний матеріал
+              ul.list
+                li
+                  span
+                  p.text-16-grey Ми вибрали його ще й тому, що має знижену теплопровідність, а значить — він посилить загальну герметизацію будинку.
+                li
+                  span
+                  p.text-16-grey Керамогранітна плитка фірм Zeus Ceramica (Україна) та Cersanit (Польща). Силіконова фасадна штукатурка Fiedal Coatings (Німеччина) не тріскається і не пошкоджується при екстремальних температурах, не притягує бруд і легко чиститься. Штукатурку з силіконовою основою не вражає пліснява та грибок.
+        .technologies-section-1__card
+          .top 3 тижні
+          h5.text-32-gold Навіси та тераса
+          ul.technologies-section-1__card__info
+            li.technologies-section-1__card__info__item
+              .row
+                span.text-14-grey 01
+                p.text-24-white Всі будинки комплектуються навісом для 2-х авто площею 46 м².
+              ul.list
+                li
+                  span
+                  p.text-16-grey Навіс виконаний з дерева смерека, та металевих панелей. Стельове LED підсвічування.
+                li
+                  span
+                  p.text-16-grey Вхідна група крита, взимку нічого не доведеться чистити.
+                li.li-100
+                  span
+                  p.text-16-grey Тераса з навісом як додаткова опція робиться на вибір з керамогранітної плитки або террасної дошки.
+    section.technologies-section-2
+      h4.title-60 Чому ми будуємо енергоефективні будинки?
+      .technologies-section-2__inner
+        .technologies-section-2__inner__top
+          .technologies-section-2__inner__top__left
+            picture
+              source(srcset="./assets/images/technologies/1.jpg" media="(min-width: 680px)")
+              img(src="./assets/images/technologies/1-680.jpg" alt="").bg
+            .technologies-section-2__inner__top__left__info
+              p.text-32-gold Ми проектуємо будинки з розрахунком на майбутнє,
+                span щоб господареві було менше клопоту з експлуатацією і не треба було витрачати щорічно цілий стан на електроенергію та постійний ремонт.
+          .technologies-section-2__inner__top__right
+            p.text-32-white Чим більше продумано моментів на етапі будівництва будинку, тим комфортнішим буде життя після заселення.
+        .technologies-section-2__inner__bottom
+          .technologies-section-2__inner__bottom__card
+            img(src='./assets/images/technologies/decor-1.svg' alt='img').icon
+            .col
+              h5.text-32-gold Витрачає менше електроенергії, ніж квартира
+              p.text-16-grey Економія до 50 000 грн. на рік. Опалення та охолодження заміського будинку в 200 метрів обходиться дешевше, ніж у 100-метровій міській квартирі.
+
+          .technologies-section-2__inner__bottom__card
+            img(src='./assets/images/technologies/decor-2.svg' alt='img').icon
+            .col
+              h5.text-32-gold Завжди свіже повітря та мінімум пилу
+              p.text-16-grey За рахунок герметичної конструкції та комбінованої системи припливної вентиляції можна обійтися без системи кондиціювання.
+          .technologies-section-2__inner__bottom__card
+            img(src='./assets/images/technologies/decor-3.svg' alt='img').icon
+            .col
+              h5.text-32-gold Тихо
+              p.text-16-grey Підвищена звукоізоляція будинку від зовнішнього шуму та внутрішніх приміщень між собою. І вже неважливо, якщо поряд аеропорт, у сусіда голосний собака та дитяча кімната на другому поверсі.
+          .technologies-section-2__inner__bottom__card
+            img(src='./assets/images/technologies/decor-4.svg' alt='img').icon
+            .col
+              h5.text-32-gold Комфортний мікроклімат
+              p.text-16-grey Комфортна температура незалежно від пори року. Тепла підлога навіть узимку.
+          .technologies-section-2__inner__bottom__card
+            img(src='./assets/images/technologies/decor-5.svg' alt='img').icon
+            .col
+              h5.text-32-gold Екологічність
+              p.text-16-grey Наші будинки збудовані з екологічно чистих будматеріалів. Вони також потребують менше енергоресурсів для комфортного проживання, це зменшує CO2 слід.
+          .technologies-section-2__inner__bottom__card
+            img(src='./assets/images/technologies/decor-6.svg' alt='img').icon
+            .col
+              h5.text-32-gold Достатньо сонця
+              p.text-16-grey Важлива складова комфортної середи – природного світла має бути багато, це також важливо для нашого здоров'я.
+
+    section.technologies-section-3
+      h4.title-60 Рішення під ключ
+      .technologies-section-3__inner
+        .technologies-section-3__inner__top
+          .technologies-section-3__inner__top__left
+            h5.text-32-white Ми з нашими партнерами пропонуємо
+              span весь необхідний перелік послуг для реалізації вашого будинку під ключ.
+            .decor
+            p.text-24-white Процес відпрацьований на
+              span більше ніж 20 будинках.
+            ul.list
+              li
+                +svg('solution-icon-2')
+                p.text-16-white Інженерні комунікації
+              li
+                +svg('solution-icon-2')
+                p.text-16-white Дизайн Інтерʼєру
+              li
+                +svg('solution-icon-2')
+                p.text-16-white Ремонтні роботи
+              li
+                +svg('solution-icon-2')
+                p.text-16-white Ландшафтний дизайн
+          .technologies-section-3__inner__top__right
+            picture
+              source(srcset="./assets/images/technologies/2.jpg" media="min-width: 1600px")
+              img(class="bg" src="./assets/images/technologies/2-1600.jpg" alt="")
+        .technologies-section-3__inner__bottom
+          h5.text-32-white Етапи реалізації будинку під ключ:
+          ul.list
+            li.info
+              h5.title-60 1
+              p.text-16-grey Адаптація планування
+            li.arrow
+              +svg('arrow-2')
+            li.info
+              h5.title-60 2
+              p.text-16-grey Розробка робочого проєкту дизайн проєкту
+            li.arrow.mobile-style
+              +svg('arrow-2')
+            li.info
+              h5.title-60 3
+              p.text-16-grey Розробка проєкту інженерних коммунікацій (опалення, вентиліця, охолодження, водопостачання)
+            li.arrow.tablet-style
+              +svg('arrow-2')
+            li.info
+              h5.title-60 4
+              p.text-16-grey Проєктування МАФів (барбекю тощо)
+            li.arrow.mobile-style
+              +svg('arrow-2')
+            li.info
+              h5.title-60 5
+              p.text-16-grey Початок ремонтних робіт
+          a(href="#").btn-style.btn-hover
+            span Перейти на сторінку Рішення під ключ
+            +svg('arrow')
+
+block footer
+  include ../includes/footer.pug
+
+block header
+  include ../includes/header.pug

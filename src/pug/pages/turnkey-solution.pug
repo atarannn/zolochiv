@@ -1,0 +1,561 @@
+
+extends ../layout/main
+block variable
+  -
+    var title_page = 'turnkey-solution'
+    var id_page = 'id-page-turnkey-solution'
+    var class_page = 'class-page-turnkey-solution'
+    var breadcrumbsSubitem = [
+      {
+        label: 'Рішення під ключ',
+        link: pagesLink[0].turnkey-solution
+      }
+    ]
+
+block meta
+  title= title_page
+  meta(name='description', content='')
+block head
+    link(rel='stylesheet', href="./assets/styles/main.min.css")
+block scripts
+  script(defer src='./assets/scripts/vendors.bundle.js')
+  script(defer src='./assets/scripts/index.bundle.js')
+  script(defer src='./assets/scripts/libs.js')
+  script(defer src='./assets/scripts/solution.bundle.js')
+  script(defer src='./assets/scripts/inner-loader.js')
+
+block content
+  include ../components/breadcrumbs/breadcrumbs
+  .content
+    section.solution-section-1
+      img(src='./assets/images/solution/decor-1.svg' alt='img').decor-1
+      .solution-section-1__info
+        .solution-section-1__info__item
+          p.text-16-grey В процесі реалізації вашого будинку буде задіяно близько
+          h5.text-32-gold 40 підрядних організацій та постачальників.
+        .solution-section-1__info__item
+          p.text-16-grey Працюйте з відібраними та перевіреними партнерами
+          h5.text-32-gold та отримайте найкращі пропозиції на ринку.
+        .solution-section-1__info__item
+          p.text-16-grey Щоб покращити ваш досвід ми створили
+          h5.text-32-gold партнерську мережу, організували процеси та злагоджену співпрацю.
+    section.solution-section-2
+      .solution-section
+        h4.title-60 Ми виконуємо такі роботи:
+        span.decor-2
+      .solution-section-2__info
+        .solution-section-2__info__item
+          p.text-14-grey Розробка проєктів МАФ
+        .solution-section-2__info__item
+          p.text-14-grey Дизайн інтерʼєру
+        .solution-section-2__info__item
+          p.text-14-grey Робочі креслення
+        .solution-section-2__info__item
+          p.text-14-grey Ремонтні роботи
+        .solution-section-2__info__item
+          p.text-14-grey Електрика
+        .solution-section-2__info__item
+          p.text-14-grey Інженерія: Опалення, Охолодження, Вентиляція та Рекуперація
+        .solution-section-2__info__item
+          p.text-14-grey Збір топкової
+        .solution-section-2__info__item
+          p.text-14-grey Камін
+        .solution-section-2__info__item
+          p.text-14-grey Водоочистка та фільтрації
+        .solution-section-2__info__item
+          p.text-14-grey Системи Автономності
+        .solution-section-2__info__item
+          p.text-14-grey Басейн
+        .solution-section-2__info__item
+          p.text-14-grey Ландшафтний дизайн
+        .solution-section-2__info__item
+          p.text-14-grey Озеленення ділянки
+        .solution-section-2__info__item
+          p.text-14-grey Газон
+        .solution-section-2__info__item
+          p.text-14-grey Система поливу
+    section.solution-section-3
+      .solution-section-3__info__wrapper
+        .solution-section
+          h4.title-60 Ремонт самі чи з нами?
+          span.decor-2
+          p.text-24-white Подивимося, на що підуть найближчі півроку
+        .solution-section-3__info
+          .solution-section-3__info-head
+            .left
+              h4.text-24-gold Самостійне будівництво:
+            .right
+              h4.text-24-gold Будівництво з нами "Під ключ":
+          .solution-section-3__info-item
+            .center
+              span.text-14-gold 1
+              +svg('solution-icon')
+            .left
+              img(src='./assets/images/solution/1.svg' alt='img').svg
+              span.decor
+              h5.text-24-gold Створення концепції:
+              p.text-16-grey З початковою ідеєю до паперу.
+            .right
+              img(src='./assets/images/solution/1-2.svg' alt='img').svg
+              span.decor
+              h5.text-24-gold Вибір проекту:
+              p.text-16-grey Різноманіття готових рішень на будь-який смак.
+          .solution-section-3__info-item.item-2
+            .center
+              span.text-14-gold 2
+              +svg('solution-icon')
+            .left
+              img(src='./assets/images/solution/2.svg' alt='img').svg
+              span.decor
+              h5.text-24-gold Вибір архітектора:
+              p.text-16-grey Пошук фахівця для розробки проекту.
+            .right
+              img(src='./assets/images/solution/2-2.svg' alt='img').svg
+              span.decor
+              h5.text-24-gold Все включено:
+              p.text-16-grey Від фундаменту до останньої лампочки — ми все забезпечимо.
+
+          .solution-section-3__info-item
+            .center
+              span.text-14-gold 3
+              +svg('solution-icon')
+            .left
+              img(src='./assets/images/solution/3.svg' alt='img').svg
+              span.decor
+              h5.text-24-gold Схвалення проекту:
+              p.text-16-grey Через бюрократичні перепони до остаточного плану.
+            .right
+              img(src='./assets/images/solution/3-2.svg' alt='img').svg
+              span.decor
+              h5.text-24-gold Без затримок:
+              p.text-16-grey Строки виконання чітко дотримуються.
+          .solution-section-3__info-item.item-2
+            .center
+              span.text-14-gold 4
+              +svg('solution-icon')
+            .left
+              img(src='./assets/images/solution/4.svg' alt='img').svg
+              span.decor
+              h5.text-24-gold Вибір підрядників:
+              p.text-16-grey Тендери, переговори, угоди.
+            .right
+              img(src='./assets/images/solution/4-2.svg' alt='img').svg
+              span.decor
+              h5.text-24-gold Контроль якості:
+              p.text-16-grey Наші фахівці гарантують високі стандарти.
+
+
+          .solution-section-3__info-item
+            .center
+              span.text-14-gold 5
+              +svg('solution-icon')
+            .left
+              img(src='./assets/images/solution/5.svg' alt='img').svg
+              span.decor
+              h5.text-24-gold Закупівля матеріалів:
+              p.text-16-grey Порівняння цін, замовлення, логістика.
+            .right
+              img(src='./assets/images/solution/5-2.svg' alt='img').svg
+              span.decor
+              h5.text-24-gold Економія часу та ресурсів:
+              p.text-16-grey Оптимальне планування та закупівля.
+
+          .solution-section-3__info-item.item-2
+            .center
+              span.text-14-gold 6
+              +svg('solution-icon')
+            .left
+              img(src='./assets/images/solution/6.svg' alt='img').svg
+              span.decor
+              h5.text-24-gold Контроль будівництва:
+              p.text-16-grey Від фундаменту до даху, день за днем.
+            .right
+              img(src='./assets/images/solution/6-2.svg' alt='img').svg
+              span.decor
+              h5.text-24-gold Юридичний супровід:
+              p.text-16-grey Усі документи та дозволи без головного болю.
+
+
+          .solution-section-3__info-item
+            .center
+              span.text-14-gold 7
+              +svg('solution-icon')
+            .left
+              img(src='./assets/images/solution/7.svg' alt='img').svg
+              span.decor
+              h5.text-24-gold Оформлення інтер'єру:
+              p.text-16-grey Дизайн, вибір меблів та декору.
+            .right
+              img(src='./assets/images/solution/7-2.svg' alt='img').svg
+              span.decor
+              h5.text-24-gold Постійна підтримка:
+              p.text-16-grey Консультації та допомога на кожному етапі.
+
+
+          .solution-section-3__info-item.item-2
+            .center
+              span.text-14-gold 8
+              +svg('solution-icon')
+            .left
+              img(src='./assets/images/solution/8.svg' alt='img').svg
+              span.decor
+              h5.text-24-gold Комунальні підключення:
+              p.text-16-grey Газ, вода, електрика, Інтернет.
+            .right
+              img(src='./assets/images/solution/8-2.svg' alt='img').svg
+              span.decor
+              h5.text-24-gold Гарантія на роботу:
+              p.text-16-grey Ваш спокій — наша відповідальність.
+
+
+
+          .solution-section-3__info-item
+            .center
+              span.text-14-gold 9
+              +svg('solution-icon')
+            .left
+              img(src='./assets/images/solution/9.svg' alt='img').svg
+              span.decor
+              h5.text-24-gold Фінальні роботи:
+              p.text-16-grey Ландшафтний дизайн, огорожа та ін.
+            .right
+              img(src='./assets/images/solution/9-2.svg' alt='img').svg
+              span.decor
+              h5.text-24-gold Переїзд без турбот:
+              p.text-16-grey Ми подбаємо про ваш комфортний в'їзд.
+
+
+
+          .solution-section-3__info-item.item-2
+            .center
+              span.text-14-gold 10
+              +svg('solution-icon')
+            .left
+              img(src='./assets/images/solution/10.svg' alt='img').svg
+              span.decor
+              h5.text-24-gold Переїзд та поселення:
+              p.text-16-grey Організація переїзду та адаптація.
+            .right
+              img(src='./assets/images/solution/10-2.svg' alt='img').svg
+              span.decor
+              h5.text-24-gold Нове життя без стресу:
+              p.text-16-grey Розслабтеся та насолоджуйтеся щастям у власному домі.
+
+        .btn-style(data-call-form).btn-hover
+          span Обговорити проект
+          +svg('arrow')
+    section.solution-section-4
+      .solution-section
+        h4.title-60 Запуск за 3 дні
+        span.decor-2
+      .solution-section-4__info
+        .solution-section-4__info__card.offset
+          .solution-section-4__info__card-inner
+            img(src='./assets/images/solution/decor-2.svg' alt='img').svg
+            .title
+              span.title-60 1.
+              h5.text-32-gold Індивідуальна адаптація проєкту
+            .text
+              p.text-16-grey Перший крок до вашої мрії - це підготовка унікального проєкту,
+                span.text-16-gold який враховує всі ваші побажання та особливості ділянки.
+              p.text-16-grey На цьому етапі ми обговорюємо з Вами всі ваші потреби, очікування та побажання та адаптуємо планування обраного проєкту під Ваші потреби.
+
+        .solution-section-4__info__card.offset
+          .solution-section-4__info__card-inner
+            img(src='./assets/images/solution/decor-2.svg' alt='img').svg
+            .title
+              span.title-60 2.
+              h5.text-32-gold Будівництво проєкту
+            .text
+              p.text-16-grey Працюючи з перевіреними підрядниками,
+                span.text-16-gold ми гарантуємо високу якість будівництва та дотримання всіх технічних вимог.
+              p.text-16-grey Ваш будинок буде побудований на час та з урахуванням всіх норм та стандартів.
+        .solution-section-4__info__card.offset
+          .solution-section-4__info__card-inner
+            img(src='./assets/images/solution/decor-2.svg' alt='img').svg
+            .title
+              span.title-60 3.
+              h5.text-32-gold Розробка проєктів дизайну та інженерних коммунікацій
+            .text
+              p.text-16-grey Наші партнери з 11interiors та Елементум розробляють дизайн та робочі проєкти.
+              p.text-16-grey За цією документацією виконуються ремонтні та монтажні роботи,
+                span.text-16-gold враховуючи всі ваші потреби та бажання.
+        .solution-section-4__info__card.offset
+          .solution-section-4__info__card-inner
+            img(src='./assets/images/solution/decor-2.svg' alt='img').svg
+            .title
+              span.title-60 4.
+              h5.text-32-gold Втілення ремонту в життя та авторський нагляд
+            .text
+              p.text-16-grey На цьому етапі наші партнери втілюють в життя раніше затверджені проєкти.
+                span.text-16-gold Кожен етап робіт супроводжується не лише технічним, але й авторським наглядом.
+              p.text-16-grey Це гарантує, що всі роботи виконуються в точній відповідності з розробленими проєктами, а ваші очікування та вимоги будуть в повній мірі враховані і реалізовані.
+
+    section.solution-section-5
+      .solution-section-5__inner
+        .solution-section-5__inner__top
+          .solution-section-5__inner__top__left
+            h4.title-60 Опалення, водопостачання, вентиляція та каналізація
+            p.text-16-grey Ми пропонуємо всім клієнтам Золочів Ліс готові комплектні інженерні рішеня з опалення, водопостачання, вентиляції та каналізації. Всі ці роботи виконує наш партнер компанія Елементум.
+          .solution-section-5__inner__top__right
+            img(src='./assets/images/solution/1.jpg' alt='img')
+        .solution-section-5__inner__bottom
+          .solution-section-5__inner__bottom__item
+            h4.text-32-gold По-перше, це дешевше.
+            p.text-16-grey Через те, що проекти вже опрацьовано та оптимізовано, використовувати їх дешевше (іноді в 2 рази), ніж робити проект індивідуально з нуля.
+          .solution-section-5__inner__bottom__item
+            h4.text-32-gold По-друге, це потребує мінімум вашого часу та швидше.
+            p.text-16-grey Тому що ми заощаджуємо час на проектування, всі партнери злагоджено працюють один з одним і від вас треба будуть тільки узгодження на початковому етапі.
+          .solution-section-5__inner__bottom__item
+            h4.text-32-gold По-третє, рішення в пакетах оптимальні.
+            p.text-16-grey Ми збудували близько 70 будинків: готуючи ці три пакети, ми вклали в них свій досвід та всі свої знання інженерних систем, а також проконсультувалися з постачальниками обладнання.
+        .solution-section-5__inner__cards
+          .solution-section-5__inner__card
+            .title
+              span
+              h5.text-32-gold Максі
+              span
+            ul.info
+              li.text-16-grey Електрика
+              li.text-16-grey Припливна вентиляція
+              li.text-16-grey Канальні фанкойли
+              li.text-16-grey Опалення теплою підлогою
+              li.text-16-grey Тепловий насос
+              li.text-16-grey Передчистове оздоблення*
+          .solution-section-5__inner__card
+            .title
+              span
+              h5.text-32-gold Оптима
+              span
+            ul.info
+              li.text-16-grey Електрика
+              li.text-16-grey Припливна вентиляція
+              li.text-16-grey Настінні фанкойли
+              li.text-16-grey Опалення теплою підлогою
+              li.text-16-grey Тепловий насос
+              li.text-16-grey Передчистове оздоблення*
+          .solution-section-5__inner__card
+            .title
+              span
+              h5.text-32-gold База
+              span
+            ul.info
+              li.text-16-grey Електрика
+              li.text-16-grey Стінові рекуператори
+              li.text-16-grey Кондиціонери
+              li.text-16-grey Опалення теплою підлогою
+              li.text-16-grey Електро котел
+              li.text-16-grey Бойлер
+              li.text-16-grey Передчистове оздоблення*
+        .solution-section-5__inner__drop-down__wrapper
+          .solution-section-5__inner__drop-down__btn(open-drop-down)
+            span Читати більше інформації
+            .arrow
+              <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M11 6.49219L6 1.50757L1 6.49219" stroke="#FFD9A1" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+
+          .solution-section-5__inner__drop-down(drop-down)
+            .solution-section-5__inner__drop-down__inner
+              h4.title-60 Що входить у пакет:
+              .solution-section-5__inner__drop-down__inner__info
+                ul.list
+                  li
+                    span.text-24-gold 1.
+                    .col
+                      p.text-24-white Опалення теплою водяною підлогою з ручним регулюванням.
+                  li
+                    span.text-24-gold 2.
+                    .col
+                      p.text-24-white Радіатор у котельні.
+                  li
+                    span.text-24-gold 3.
+                    .col
+                      p.text-24-white Наповнення котельні:
+                      p.text-16-grey Тепловий насос, Резервні ємності по 200 л, опалювальний контролер ZONT SMART 2.0 (пристрій для автоматизації, дистанційного контролю та управління системами опалення)
+                  li
+                    span.text-24-gold 4.
+                    .col
+                      p.text-24-white Вузол введення води в будинок.
+                  li
+                    span.text-24-gold 5.
+                    .col
+                      p.text-24-white GSM-розетка.
+                      p.text-16-grey Система моніторингу критичних параметрів будинку, яка відстежує наявність електрики, рівень температури в приміщенні та тиск в опалювальній системі
+                  li
+                    span.text-24-gold 6.
+                    .col
+                      p.text-24-white Стабілізатор для захисту котла від перепаду напруги.
+                  li
+                    span.text-24-gold 7.
+                    .col
+                      p.text-24-white Розетки для обладнання.
+                  li
+                    span.text-24-gold 8.
+                    .col
+                      p.text-24-white Природна вентиляція у вологих приміщеннях і на кухні.
+                  li
+                    span.text-24-gold 9.
+                    .col
+                      p.text-24-white Точки рециркуляції ГВП у бойлері.
+                      p.text-16-grey Система, завдяки якій гаряча вода з крана йде одразу, без очікування, доки зіллється остигла вода
+                  li
+                    span.text-24-gold 10.
+                    .col
+                      p.text-24-white Трап у котельні для зливу води на випадок аварійної ситуації.
+                .bottom
+                  h5.text-32-gold Цей пакет інженерних рішень точно вирахували наші фахівці - комплекту буде достатньо для комфортного життя в будинках Золочів Ліс.
+                  img(src='./assets/images/solution/decor-4.svg' alt='img').img
+            .divider
+            .solution-section-5__inner__drop-down__inner
+              h4.title-60 Також як додаткові опції ми також можемо встановити:
+              .solution-section-5__inner__drop-down__inner__info
+                ul.list
+                  li
+                    span.text-24-gold 1.
+                    .col
+                      p.text-24-white Припливну вентиляцію в будинку з системою рекуперації.
+                  li
+                    span.text-24-gold 2.
+                    .col
+                      p.text-24-white Систему автономності
+                      p.text-16-grey (щоб залишатися з'єднаними з комфортом навіть під час блекаутів та відключень.)
+                  li
+                    span.text-24-gold 3.
+                    .col
+                      p.text-24-white Радіатори.
+                  li
+                    span.text-24-gold 4.
+                    .col
+                      p.text-24-white Автоматичне управління теплою підлогою за допомогою датчиків.
+                  li
+                    span.text-24-gold 5.
+                    .col
+                      p.text-24-white Систему захисту від протікання,
+                  li
+                    span.text-24-gold 6.
+                    .col
+                      p.text-24-white Трап у душовій.
+                  li
+                    span.text-24-gold 7.
+                    .col
+                      p.text-24-white Інсталяцію для унітазу.
+                  li
+                    span.text-24-gold 8.
+                    .col
+                      p.text-24-white Гігієнічний душ.
+    section.solution-section-6
+      .solution-section-6__left
+        h4.title-60 Чи можна опалювати заміський будинок тільки теплою підлогою?
+        span.decor
+        p.text-16-grey У випадку ТК-2 ми з упевненістю можемо сказати, що так. Ми розрахували комфортний нагрів будинку згідно з ДБНами. Крім цього постачальник теплих підлог Rehau самостійно прорахував і перевірив проєкт індивідуально для будинків Золочів Ліс. Тому ми рекомендуємо використовувати теплі підлоги замість радіаторів.
+      .solution-section-6__right
+        img(src='./assets/images/solution/2.jpg' alt='img').bg
+        .solution-section-6__right__inner
+          h5.text-32-gold У наших будинках ми використовуємо обладнання таких компаній:
+          .solution-section-6__right__inner__items
+            .solution-section-6__right__inner__item
+              p.text-14-grey Stout
+            .solution-section-6__right__inner__item
+              p.text-14-grey Rehau
+            .solution-section-6__right__inner__item
+              p.text-14-grey Römmer
+    section.solution-section-7
+      h5.text-32-gold Плюсів у цього рішення багато:
+      .solution-section-7__items
+        .solution-section-7__item
+          h5.text-32-gold 1.
+          h6.text-24-white Економія
+          p.text-16-grey Капітальні вкладення при установці теплих підлог нижчі, ніж при використанні радіаторів. Також ви заощаджуєте в процесі експлуатації будинку, оскільки тепла підлога - це низькотемпературне джерело, і енергії витрачається менше.
+        .solution-section-7__item
+          h5.text-32-gold 2.
+          h6.text-24-white Ефективність
+          p.text-16-grey Тепла підлога приблизно на чверть ефективніша за радіаторну систему опалення, оскільки ця система перекриває всю площу приміщення, а не сконцентрована в одній точці.
+        .solution-section-7__item
+          h5.text-32-gold 3.
+          h6.text-24-white Комфорт
+          p.text-16-grey Можливість ходити теплою підлогою, зокрема без домашнього взуття, - сильно підвищує якість життя в будинку.
+        .solution-section-7__item
+          h5.text-32-gold 4.
+          h6.text-24-white Естетичність
+          p.text-16-grey Часто радіатори не вписуються в інтер'єр стилістично, у разі теплих підлог такої проблеми не буде. Відсутність впливу на вологість повітря. На відміну від радіаторів, теплі підлоги не сушать повітря в будинку.
+        .solution-section-7__item
+          h5.text-32-gold 5.
+          h6.text-24-white Збільшення корисної площі будинку
+          p.text-16-grey Завдяки відсутності масивних радіаторів, труб і решіток простір біля вікна можна використовувати ефективніше.
+        .solution-section-7__item
+          h5.text-32-gold 6.
+          h6.text-24-white Зниження пилу в будинку
+          p.text-16-grey Радіатори створюють конвекційні потоки, які посилюють поширення пилу в будинку. З теплими підлогами такого ефекту не буде.
+        .solution-section-7__item
+          h5.text-32-gold 7.
+          h6.text-24-white Інерційність
+          p.text-16-grey Радіатор дає змогу дуже швидко змінити температуру будинку. А тепла підлога має інерційність. Коли її вимикаєш - вона остигає повільно, оскільки площа тепловіддачі велика. Тому в разі відключення електрики будинок ще довго зберігатиме тепло.
+        .solution-section-7__item
+          img(src='./assets/images/solution/decor-3.png' alt='img').decor
+    section.solution-section-8
+      .swiper-container.solution-section-8-swiper
+        .solution-section-8-swiper-btn
+          .swiper-btn(data-prev-btn-section-8).data-prev-btn
+            +svg('arrow-up')
+          .swiper-btn(data-next-btn-section-8).data-next-btn
+            +svg('arrow-up')
+        .swiper-wrapper
+          .swiper-slide
+            img(src='./assets/images/solution/slider/1.jpg' alt='img')
+          .swiper-slide
+            img(src='./assets/images/solution/slider/1.jpg' alt='img')
+
+      .solution-section-8__info
+        h5.text-32-gold Індивідуальний дизайн інтерʼєру від студії 11 interiors
+        a(href="#").btn-style.btn-hover
+          span Дивитися проєкти
+          +svg('arrow')
+    section.solution-section-9
+      .solution-section-9__left
+        h4.title-60 Кому підійде
+        span.decor
+        p.text-32-white Енергоефективний будинок підійде для тих, хто:
+        ul.solution-section-9__left__list
+          li
+            +svg('solution-icon-2')
+            .text-16-white Хоче розумно витрачати електрику навіть у холодну пору року
+          li
+            +svg('solution-icon-2')
+            .text-16-white Рзнає, що таке CO2 та піклується про якість повітря у своєму будинку
+          li
+            +svg('solution-icon-2')
+            .text-16-white Думає про те, щоб було менше турбот по дому
+          li
+            +svg('solution-icon-2')
+            .text-16-white Не хоче використовувати систему кондиціювання та шукає альтернативні варіанти
+          li
+            +svg('solution-icon-2')
+            .text-16-white Шукає екологічне житло
+        .btn-style(data-call-form).btn-hover
+          span Обговорити проект
+          +svg('arrow')
+      .solution-section-9__right
+        img(src='./assets/images/solution/3.jpg' alt='img')
+    section.home-section-11
+      .home-section__title.mobile-block
+        img(src='./assets/images/home/decor-title.svg' alt='img').decor
+        h2.title-96 Технології будівництва
+      .home-section-11__img
+        img(src='./assets/images/home/section-11/1.jpg' alt='img')
+        img(src='./assets/images/home/section-11/2.jpg' alt='img')
+        h2.title-96 Технології будівництва
+      .home-section-11__info
+        .text-32-white Давайте подивимося на етапи будівництва та особливості матеріалів та технологій, які ми використовуємо.
+        .row
+          .text-16-grey Ми проектуємо будинки з розрахунком на майбутнє, щоб господареві було менше клопоту з експлуатацією і не треба було витрачати щорічно цілий стан на електроенергію та постійний ремонт. Чим більше продумано моментів на етапі будівництва будинку, тим комфортнішим буде життя після заселення.
+          a(href="#").btn-style.btn-hover
+            span Перейти до розділу
+            +svg('arrow')
+
+
+block footer
+  include ../includes/footer.pug
+
+block header
+  include ../includes/header.pug

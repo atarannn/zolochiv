@@ -1,0 +1,215 @@
+
+extends ../layout/main
+block variable
+  -
+    var title_page = 'developer'
+    var id_page = 'id-page-developer'
+    var class_page = 'class-page-developer'
+    var breadcrumbsSubitem = [
+      {
+        label: 'Девелопер',
+        link: pagesLink[0].developer
+      }
+    ]
+
+block meta
+  title= title_page
+  meta(name='description', content='')
+block head
+    link(rel='stylesheet', href="./assets/styles/main.min.css")
+block scripts
+  script(defer src='./assets/scripts/vendors.bundle.js')
+  script(defer src='./assets/scripts/index.bundle.js')
+  script(defer src='./assets/scripts/developer.bundle.js')
+  script(defer src='./assets/scripts/inner-loader.js')
+
+block content
+  include ../components/breadcrumbs/breadcrumbs
+  .content
+    section.developer-section-1
+      .developer-section-1-item
+        img(src='./assets/images/developer/dev-logo.svg' alt='img').img
+      .developer-section-1-item
+        p.text-16-grey Забудовник проєкту компанія
+        h5.text-32-white Diachuk Family Development
+      .developer-section-1-item
+        p.text-16-grey Створюємо містечка для життя в передмісті Києва
+        h5.text-32-white на рівні США та Європи
+      .developer-section-1-item
+        .btn__wrapper
+          a(href="#").btn-style.btn-hover
+            span на сайт забудовника
+            +svg('arrow')
+          img(src='./assets/images/developer/decor-1.svg' alt='img').decor
+    section.developer-section-2
+      .developer-section-2__left
+        h4.title-60 Початком нашої історії можна вважати
+          span (липень) 1999 року, коли ми всією родиною переїхали до нашого першого будинку.
+      .developer-section-2__right
+        .row
+          p.text-16-gold.first Тільки спробувавши, розумієш, що життя у заміському будинку – це зовсім інший рівень якості життя.
+            span Але не кожен будинок дозволить це відчути в повній мірі. Саме до цього я і прийшов, після 20 років життя у 4 будинках.
+          p.text-16-gold.second Ідея створити по-справжньому комфортне заміське житло сподобалося всій нашій родині,
+            span тому DFD - це сімейна компанія, де ми об'єднані не лише сімейними узами, а й спільною метою.
+        img(src='./assets/images/developer/1.jpg' alt='img').img
+
+    .border
+    section.developer-section-3
+      .developer-section-3__left
+        h4.title-60 Всі говорять про комфорт, але краще давайте прояснимо,
+          span що ж це таке в нашому розумінні
+      .developer-section-3__right
+        .developer-section-3__right-item.item-1
+          h5.text-16-gold 01.
+          h4.text-32-white ЛОКАЦІЯ ВИРІШУЄ БАГАТО
+          p.text-16-grey Від інфраструктури, транспортної доступності та навколишньої природи залежить якість заміського життя.
+        .developer-section-3__right-item.item-2
+          h5.text-16-gold 02.
+          h4.text-32-white ПОВІТРЯ СПРИЯЄ ЗДОРОВ'Ю
+          p.text-16-grey Повітря, яким ми дихаємо впливає на наше здоров'я і імунітет, тому в будинку повинна бути хороша вентиляція протягом усього часу.
+        .developer-section-3__right-item.item-3
+          h5.text-16-gold 03.
+          h4.text-32-white БУДИНОК – ЦЕ НЕ ПРОСТО МЕТРИ КВАДРАТНІ
+          p.text-16-grey Затишок залежить не від кількості метрів, а від планування – правильного співвідношення. відчуттів простору та самотності.
+        .developer-section-3__right-item.item-4
+          h5.text-16-gold 04.
+          h4.text-32-white ФІНАНСОВО ПРИВАБЛИВИЙ
+          p.text-16-grey Якість будинків та інфраструктури дозволяє зберегти, а часом і збільшити ціну на ваш актив через роки. А енергоефективність суттєво знижує витрати на його утримання.
+        .developer-section-3__right-item.item-5
+          h5.text-16-gold 05.
+          h4.text-32-white ДОСТАТНЬО СОНЦЯ
+          p.text-16-grey Важлива складова комфортної середи – природного світла має бути багато, це також важливо для нашого здоров'я.
+        .developer-section-3__right-item.item-6
+          h5.text-16-gold 06.
+          h4.text-32-white НАДІЙНІСТЬ
+          p.text-16-grey Будинок повинен приносити радість і спокій, а не постійні турботи. Наші будинки пройдуть будь-яку європейську сертифікацію.
+    .border
+    section.developer-section-4
+      .developer-section-4__left
+        h4.title-60 Історія компанії
+          span Diachuk Family Development
+      .developer-section-4__right
+        .developer-section-4__right-item
+          img(src='./assets/images/developer/2.jpg' alt='img').img
+          .col
+            h4.title-60 2000 рік
+            p.text-16-grey Дмитро Іванович переїхав до Вишеньки до свого першого будинку
+        .developer-section-4__right-item
+          img(src='./assets/images/developer/3.jpg' alt='img').img
+          .col
+            h4.title-60 2003 рік
+            p.text-16-grey Почав будувати будинки біля затоки
+        .developer-section-4__right-item
+          img(src='./assets/images/developer/4.jpg' alt='img').img
+          .col
+            h4.title-60 2006 рік
+            p.text-16-grey Збудував 2 будинки біля затоки на старті
+        .developer-section-4__right-item
+          img(src='./assets/images/developer/5.jpg' alt='img').img
+          .col
+            h4.title-60 2007 рік
+            p.text-16-grey Почали будівництво кварталу Золоче Клаб
+        .developer-section-4__right-item
+          img(src='./assets/images/developer/6.jpg' alt='img').img
+          .col
+            h4.title-60 2010 рік
+            p.text-16-grey Продали останній будинок у Золоче Клаб
+        .developer-section-4__right-item
+          img(src='./assets/images/developer/7.jpg' alt='img').img
+          .col
+            h4.title-60 2019 рік
+            p.text-16-grey Старт будівництва Золоче Прованс
+        .developer-section-4__right-item
+          img(src='./assets/images/developer/8.jpg' alt='img').img
+          .col
+            h4.title-60 2020 рік
+            p.text-16-grey Продано більше 60% об'єктів
+        .developer-section-4__right-item
+          img(src='./assets/images/developer/9.jpg' alt='img').img
+          .col
+            h4.title-60 2021 рік
+            p.text-16-grey Старт будівництва Gran Montaña
+        .developer-section-4__right-item
+          img(src='./assets/images/developer/10.jpg' alt='img').img
+          .col
+            h4.title-60 2021 рік
+            p.text-16-grey Розроблено концепт Золочів Ліс
+    .border
+    section.developer-section-5
+      .developer-section-5__left
+        h4.title-60 Про нас
+          span говорять ЗМІ
+      .developer-section-5__right
+        .developer-section-5__right-item
+          p.text-16-grey Видання
+          h5.text-32-white Заміська нерухомість
+        .developer-section-5__right-item
+          a(href="#").btn-style.btn-hover
+            span Дивитися матеріал
+            +svg('arrow')
+        .developer-section-5__right-item
+          p.text-16-grey Youtube канал
+          h5.text-32-white Шукаю житло
+        .developer-section-5__right-item
+          a(href="#").btn-style.btn-hover
+            span Дивитися матеріал
+            +svg('arrow')
+        .developer-section-5__right-item
+          p.text-16-grey Youtube канал
+          h5.text-32-white Нерухомість без цензури
+        .developer-section-5__right-item
+          a(href="#").btn-style.btn-hover
+            span Дивитися матеріал
+            +svg('arrow')
+    .border
+    section.developer-section-6
+      h4.title-60 Наша команда
+      .developer-section-6__info
+        .developer-section-6__info-item
+          img(src='./assets/images/developer/11.jpg' alt='img').img
+          .text
+            p.text-16-grey Засновник та CEO
+            h5.text-32-white Дячук Дмитро Іванович
+        .developer-section-6__info-item
+          img(src='./assets/images/developer/12.jpg' alt='img').img
+          .text
+            p.text-16-grey Відділ продажів
+            h5.text-32-white Дячук Руслан
+        .developer-section-6__info-item
+          img(src='./assets/images/developer/13.jpg' alt='img').img
+          .text
+            p.text-16-grey Відділ Дизайну та Архітектури
+            h5.text-32-white Дячук Марiя
+        .developer-section-6__info-item
+          img(src='./assets/images/developer/14.jpg' alt='img').img
+          .text
+            p.text-16-grey Відділ маркетингу
+            h5.text-32-white Дячук Максим
+    .border
+    section.developer-section-7
+      h4.title-60 Інші проєкти забудовника
+      .developer-section-7__info
+        .developer-section-7__info-item
+          .img
+            .mask
+            img(src='./assets/images/developer/15.jpg' alt='img')
+          .info
+            h5.text-32-white ЗОЛОЧЕ ПРОВАНС
+            a(href="#").btn-style.btn-hover
+              span Сайт проєкту
+              +svg('arrow')
+        .developer-section-7__info-item
+          .img
+            .mask
+            img(src='./assets/images/developer/16.jpg' alt='img')
+          .info
+            h5.text-32-white GRAN MONTAÑA
+            a(href="#").btn-style.btn-hover
+              span Сайт проєкту
+              +svg('arrow')
+
+block footer
+  include ../includes/footer.pug
+
+block header
+  include ../includes/header.pug
