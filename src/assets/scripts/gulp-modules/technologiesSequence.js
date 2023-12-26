@@ -92,6 +92,47 @@ document.querySelectorAll('.technologies-section-1__card').forEach((card, i) => 
             }
         }
     });
+
+    if (document.documentElement.clientWidth < 1024) {
+      ScrollTrigger.create({
+        trigger: card,
+        start: '-10% center',
+        end: '50% center',
+        onToggle: (self) => {
+          if (!self.isActive) return;
+          currentSequenceNumberAnimated = i;
+          animateFromTo({
+            start: currentFrame,
+            end: definedBlocksKeyFrames[i],
+            sequenceId: currentSequenceNumberAnimated,
+            changeState: (frame) => {
+              if (!loadedImages[frame]) {
+                return;
+              }
+              $canvas.src = loadedImages[frame];
+              currentFrame = frame;
+            }
+          });
+
+          if (!isLoaded) {
+            onLoadImagesCallback = () => {
+              animateFromTo({
+                start: currentFrame,
+                end: definedBlocksKeyFrames[i],
+                sequenceId: currentSequenceNumberAnimated,
+                changeState: (frame) => {
+                  if (!loadedImages[frame]) {
+                    return;
+                  }
+                  $canvas.src = loadedImages[frame];
+                  currentFrame = frame;
+                }
+              });
+            }
+          }
+        }
+      });
+    }
 });
 
 
