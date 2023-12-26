@@ -17,10 +17,10 @@ let currentFrame = 0;
 let currentSequenceNumberAnimated = 0;
 
 const definedBlocksKeyFrames = {
-    '0': 0,
-    '1': 60,
-    '2': 72,
-    '3': 200,
+    '0': 18,
+    '1': 33,
+    '2': 132,
+    '3': 162,
     '4': 200,
     '5': 239,
     '6': 350,
@@ -54,16 +54,16 @@ loadImages()
 
 
 document.querySelectorAll('.technologies-section-1__card').forEach((card, i) => {
-    ScrollTrigger.create({ 
+    ScrollTrigger.create({
         trigger: card,
-        start: '40% 50%',
-        end: '60% 50%',
+        start: '40% center',
+        end: '50% center',
         onToggle: (self) => {
             if (!self.isActive) return;
             currentSequenceNumberAnimated = i;
             animateFromTo({
-                start: currentFrame, 
-                end: definedBlocksKeyFrames[i],                
+                start: currentFrame,
+                end: definedBlocksKeyFrames[i],
                 sequenceId: currentSequenceNumberAnimated,
                 changeState: (frame) => {
                     if (!loadedImages[frame]) {
@@ -77,7 +77,7 @@ document.querySelectorAll('.technologies-section-1__card').forEach((card, i) => 
             if (!isLoaded) {
                 onLoadImagesCallback = () => {
                     animateFromTo({
-                        start: currentFrame, 
+                        start: currentFrame,
                         end: definedBlocksKeyFrames[i],
                         sequenceId: currentSequenceNumberAnimated,
                         changeState: (frame) => {
