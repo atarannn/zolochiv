@@ -2,7 +2,7 @@ import axios from "axios";
 
 const baseUrl = document.documentElement.dataset.base || window.location.origin + '/wp-content/themes/3d';
 
-const FPS = 25;
+const FPS = 60;
 
 const sequenceFolderUrl = baseUrl + '/assets/images/houseSequence/';
 const imagesCount = 351;
