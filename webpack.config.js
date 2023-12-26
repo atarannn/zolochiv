@@ -9,7 +9,8 @@ const config = {
     cottages: './src/assets/scripts/gulp-modules/cottages.js',
     contacts: './src/assets/scripts/gulp-modules/contacts.js',
     solution: './src/assets/scripts/gulp-modules/turnkey-solution.js',
-    developer: './src/assets/scripts/gulp-modules/developer.js'
+    developer: './src/assets/scripts/gulp-modules/developer.js',
+    technologiesSequence: './src/assets/scripts/gulp-modules/technologiesSequence.js',
   },
   output: {
     filename: '[name].bundle.js',

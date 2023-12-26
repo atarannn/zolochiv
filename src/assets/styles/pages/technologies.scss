@@ -312,7 +312,7 @@
     position: sticky;
     top: calc(var(--header-h-2) + 20px);
     height: calc(100vh - var(--header-h-1) - var(--offset-100)*2);
-    background: white;
+    // background: white;
     padding-bottom: 52.5%;
 
     @include to(1024px){
