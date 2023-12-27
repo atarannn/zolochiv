@@ -790,6 +790,7 @@
       .list {
         margin: var(--padding-20) 0;
         width: 100%;
+        height: -webkit-fill-available;
         display: grid;
         grid-template-columns: 1fr auto 1fr auto 1fr;
         align-items: center;
