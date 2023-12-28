@@ -795,17 +795,18 @@
         grid-template-columns: 1fr auto 1fr auto 1fr;
         align-items: center;
         gap: 8px;
+        grid-template-rows: repeat(2, -webkit-max-content);
+        height: auto;
 
         @include to(1024px) {
           margin: var(--padding-28) 0;
-        }
-
-        @include to(1024px) {
           grid-template-columns: 1fr auto 1fr;
+          grid-template-rows: repeat(3, -webkit-max-content);
         }
 
         @include to(680px) {
           grid-template-columns: 1fr;
+          grid-template-rows: auto;
           justify-items: center;
         }
 
