@@ -9,6 +9,11 @@
   opacity: 0;
   background: var(--dark-blue);
 
+  @media screen and (max-width: 1024px){
+    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
+  }
+
   &.not-top {
     .menu-header {
       margin-top: 0px;
@@ -115,8 +120,12 @@
     }
 
     @include to(1024px) {
-      height: auto;
+      height: calc(var(--vh, 1vh) * 100 - var(--header-h-1)*2 - 20px);
     }
+
+    //@include to(1024px) {
+    //  height: auto;
+    //}
 
     .menu-list {
       width: 100%;
@@ -134,9 +143,9 @@
          justify-content: center;
          border-bottom: 1px dashed var(--gold-primary);
 
-         @include to(1024px) {
-           height: auto;
-         }
+         //@include to(1024px) {
+         //  height: auto;
+         //}
 
          &:first-child {
            border-top: 1px dashed var(--gold-primary);
@@ -151,13 +160,13 @@
            text-align: center;
            text-transform: uppercase;
 
-           @include to(1024px) {
-             height: calc(var(--font-60) + 3vh*2);
-           }
-
-           @include to(680px) {
-             height: calc(var(--font-60) + 2.5vh*2);
-           }
+           //@include to(1024px) {
+           //  height: calc(var(--font-60) + 3vh*2);
+           //}
+           //
+           //@include to(680px) {
+           //  height: calc(var(--font-60) + 2vh*2);
+           //}
          }
        }
     }
