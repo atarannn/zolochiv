@@ -28,12 +28,25 @@ const definedBlocksKeyFrames = {
 
 
 
-async function loadImages() {
-    for (let i = 0; i < imagesCount; i++) {
-        const response = await axios.get(sequenceFolderUrl + i + '.jpg', { responseType: 'blob' });
-        loadedImages[i] = URL.createObjectURL(response.data);
-    }
+function loadImages() {
+  const requests = [];
+
+  for (let i = 0; i < imagesCount; i++) {
+    const request = axios.get(sequenceFolderUrl + i + '.jpg', { responseType: 'blob' })
+      .then(response => URL.createObjectURL(response.data));
+    requests.push(request);
+  }
+
+  return Promise.all(requests)
+    .then(urls => {
+      urls.forEach((url, i) => {
+        loadedImages[i] = url;
+      });
+    });
 }
+
+// Rest of your code...
+
 
 gsap.to($canvas, {
     autoAlpha: 0,
