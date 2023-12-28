@@ -874,15 +874,21 @@
   }
 }
 
-.desktop.landscape {
-  .technologies-section-3__inner__bottom .list li.arrow {
-    &.tablet-style {
-      display: none;
-    }
+.technologies-section-3__inner__bottom .list li.arrow {
+  &.tablet-style {
+    display: none;
   }
 }
 
-.desktop.portrait, .tablet {
+//.desktop.landscape {
+//  .technologies-section-3__inner__bottom .list li.arrow {
+//    &.tablet-style {
+//      display: none;
+//    }
+//  }
+//}
+
+@media screen and (max-width: 1024px){
   .technologies-section-3__inner__bottom .list li.arrow {
     &.tablet-style {
       display: flex;
@@ -893,5 +899,29 @@
     }
   }
 }
+
+@media screen and (max-width: 680px){
+  .technologies-section-3__inner__bottom .list li.arrow {
+    &.tablet-style {
+      display: flex;
+    }
+
+    &.mobile-style {
+      display: flex;
+    }
+  }
+}
+
+//.desktop.portrait, .tablet {
+//  .technologies-section-3__inner__bottom .list li.arrow {
+//    &.tablet-style {
+//      display: flex;
+//    }
+//
+//    &.mobile-style {
+//      display: none;
+//    }
+//  }
+//}
 
 
