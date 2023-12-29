@@ -12,8 +12,8 @@ function transformAnimation1(selector, $scroller) {
       })
       .fromTo(
         block,
-        { yPercent: 0, },
-        { yPercent: -40, duration: 1, ease: "power4.out" }
+        { yPercent: -50 },
+        { yPercent: -30, duration: 1, ease: "power4.out" }
       );
   });
 }

@@ -9,10 +9,10 @@
   opacity: 0;
   background: var(--dark-blue);
 
-  @media screen and (max-width: 1024px){
-    height: 100vh;
-    height: calc(var(--vh, 1vh) * 100);
-  }
+  //@media screen and (max-width: 1024px){
+  //  height: 100vh;
+  //  height: calc(var(--vh, 1vh) * 100);
+  //}
 
   &.not-top {
     .menu-header {
