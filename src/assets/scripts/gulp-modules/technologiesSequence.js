@@ -2,7 +2,7 @@ import axios from "axios";
 
 const baseUrl = document.documentElement.dataset.base || window.location.origin + '/wp-content/themes/3d';
 
-const FPS = 60;
+const FPS = 40;
 
 const sequenceFolderUrl = baseUrl + '/assets/images/houseSequence/';
 const imagesCount = 351;
@@ -69,8 +69,8 @@ loadImages()
 document.querySelectorAll('.technologies-section-1__card').forEach((card, i) => {
     ScrollTrigger.create({
         trigger: card,
-        start: '40% center',
-        end: '50% center',
+        start: '20% center',
+        end: '80% center',
         onToggle: (self) => {
             if (!self.isActive) return;
             currentSequenceNumberAnimated = i;
