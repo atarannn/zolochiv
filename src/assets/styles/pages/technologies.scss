@@ -275,6 +275,15 @@
               width: 100%;
             }
 
+            &.li-100-2 {
+              width: 100%;
+
+              &:last-child {
+                border-top: 1px solid var(--dark-blue)!important;
+                border-left: none;
+              }
+            }
+
             &:nth-child(even) {
               border-left: 1px solid var(--dark-blue);
 
