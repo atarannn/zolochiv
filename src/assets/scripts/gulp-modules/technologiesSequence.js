@@ -17,13 +17,14 @@ let currentFrame = 0;
 let currentSequenceNumberAnimated = 0;
 
 const definedBlocksKeyFrames = {
-    '0': 18,
-    '1': 33,
-    '2': 132,
-    '3': 162,
-    '4': 200,
-    '5': 239,
-    '6': 350,
+    '0': 33,
+    '1': 61,
+    '2': 99,
+    '3': 132,
+    '4': 162,
+    '5': 209,
+    '6': 247,
+    '7': 350,
 }
 
 

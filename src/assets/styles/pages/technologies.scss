@@ -159,6 +159,7 @@
       border: 1px solid rgba(241, 244, 250, 0.20);
       display: flex;
       align-items: center;
+      text-align: center;
       justify-content: center;
       padding: 8px 16px;
       color: var(--black);
@@ -168,7 +169,7 @@
       font-weight: 600;
       line-height: 120%; /* 16.8px */
       text-transform: uppercase;
-      width: 110px;
+      width: 130px;
     }
 
     .text-32-gold {
