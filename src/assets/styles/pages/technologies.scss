@@ -131,9 +131,9 @@
       transform-origin: top;
       top: 50vh;
 
-      @for $i from 1 through 10 {
+      @for $i from 2 through 9 {
         &:nth-child(#{$i}) {
-          top: calc(#{$i * 5px} + 47vh);
+          top: calc(#{$i * 5px - 5px} + 50vh);
         }
       }
     }
@@ -143,15 +143,17 @@
       padding: var(--padding-12);
       box-shadow: 0px 20px 20px 0px rgba(23, 24, 27, 0.5);
 
-      @for $i from 1 through 10 {
+      @for $i from 2 through 9 {
         &:nth-child(#{$i}) {
-          top: calc(#{$i * 5px} + 50vh);
+          top: calc(#{$i * 5px - 5px} + 50vh);
         }
       }
     }
 
     &:last-child {
-      margin-bottom: 0;
+      @include from(1023px) {
+        margin-bottom: 0;
+      }
     }
 
     .top {
