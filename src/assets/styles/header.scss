@@ -59,6 +59,7 @@
     }
 
     @include to(680px) {
+      height: var(--btn-h);
       order: 1;
       margin-right: auto;
     }
