@@ -671,7 +671,7 @@
   position: relative;
 
   .home-section__title {
-    @include to(1024px) {
+    @include to(1374px) {
       margin-bottom: 70px;
     }
   }
@@ -695,7 +695,7 @@
         width: calc(55vw + 200px + var(--btn-circle));
       }
 
-      @include to(1024px) {
+      @include to(1374px) {
         width: auto;
         bottom: calc(-1*var(--padding-28));
         top: auto;
@@ -714,9 +714,13 @@
       width: 55vw!important;
       height: auto;
 
+      @include to(1374px) {
+        width: 75vw!important;
+        box-shadow: 0px 117.448px 80.078px -85.417px rgba(23, 24, 27, 0.50);
+      }
+
       @include to(1024px) {
         width: 85vw!important;
-        box-shadow: 0px 117.448px 80.078px -85.417px rgba(23, 24, 27, 0.50);
       }
 
       @include to(680px) {
@@ -726,7 +730,7 @@
 
       &:nth-child(4n+1) {
         .decor {
-          @include to(1024px) {
+          @include to(1400px) {
             transform: translate(-50%, -50%) rotate(-55deg);
           }
         }
@@ -764,13 +768,17 @@
           height: 35%;
         }
 
-        @include to(1024px) {
+        @include to(1374px) {
           top: -20px;
           left: 50%;
           right: auto;
           transform: translate(-50%, -50%);
-          height: 70%;
+          height: 50%;
           z-index: -1;
+        }
+
+        @include to(1024px) {
+          height: 70%;
         }
 
         @include to(680px) {

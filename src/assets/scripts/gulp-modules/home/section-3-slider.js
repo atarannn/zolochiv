@@ -16,7 +16,7 @@ const sliderSection3 = new Swiper('.home-section-3-swiper', {
     1600: {
       spaceBetween: 250
     },
-    1360: {
+    1374: {
       spaceBetween: 200
     },
   }

@@ -9,3 +9,39 @@ gsap.timeline({scrollTrigger :{
     },
     stagger: 1 / document.querySelectorAll('.solution-section-4__info__card').length,
   })
+
+
+if (document.documentElement.clientWidth < 1024) {
+  const cardTrigger = document.querySelectorAll('.solution-section-3__info-item');
+
+  function customAnimationAdd(element) {
+    element.classList.add('mobile-hover');
+  }
+
+  function customAnimationRemove(element) {
+    element.classList.remove('mobile-hover');
+  }
+
+  cardTrigger.forEach((trigger, index) => {
+    gsap
+      .timeline({
+        scrollTrigger: {
+          trigger: trigger,
+          start: "0% center",
+          end: "100% center",
+          onEnter: () => {
+            customAnimationAdd(trigger);
+          },
+          onEnterBack: () => {
+            customAnimationAdd(trigger);
+          },
+          onLeave: () => {
+            customAnimationRemove(trigger);
+          },
+          onLeaveBack: () => {
+            customAnimationRemove(trigger);
+          },
+        },
+      });
+  });
+}

@@ -78,6 +78,14 @@
 }
 
 .desktop.landscape {
+  .widget-close-hover {
+    transition: transform .3s ease-in-out;
+
+    &:hover {
+      transform: scale(1.15);
+    }
+  }
+
   .cubic-hover {
     overflow: hidden;
     position: relative;
@@ -182,6 +190,35 @@
       left: -10%;
       content: "";
       background: var(--gold-primary);
+      width: 120%;
+      height: 100%;
+      transform: skew(30deg);
+      transition: transform 0.6s cubic-bezier(0.3, 1, 0.8, 1);
+    }
+
+    &:hover {
+      &:before {
+        transform: translate3d(100%, 0, 0);
+      }
+    }
+  }
+
+  .btn-hover-4 {
+    position: relative;
+    transform: translateZ(0);
+    overflow: hidden;
+    background: var(--blue-secondary);
+
+    span, svg {
+      position: relative;
+    }
+
+    &:before {
+      position: absolute;
+      top: 0;
+      left: -10%;
+      content: "";
+      background: var(--dark-blue);
       width: 120%;
       height: 100%;
       transform: skew(30deg);
@@ -348,6 +385,31 @@
     }
   }
 
+  .link-hover-3 {
+    position: relative;
+
+    &:before {
+      content: "";
+      background: var(--dark-blue);
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      top: 100%;
+      left: 0;
+      pointer-events: none;
+      transform-origin: 100% 50%;
+      transform: scale3d(0, 1, 1);
+      transition: transform 0.3s;
+    }
+
+    &:hover {
+      &:before {
+        transform-origin: 0% 50%;
+        transform: scale3d(1, 1, 1);
+      }
+    }
+  }
+
   .swiper-btn-hover {
     transition: border .3s ease-in-out;
 
@@ -404,7 +466,6 @@
       }
     }
   }
-
 
   .btn-up {
     &__wrapper {

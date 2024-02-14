@@ -10,8 +10,7 @@
   align-items: flex-end;
   visibility: hidden;
   opacity: 0;
-  background: rgba(0, 0, 0, 0.8);
-  padding: 0 var(--field) 20px;
+  background: rgba(23, 24, 27, 0.9);
   pointer-events: none;
 
   @include to(1024px) {
@@ -22,7 +21,10 @@
     visibility: visible;
     opacity: 1;
   }
+
   ul {
+    background: var(--blue-secondary);
+    padding: 20px;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -30,24 +32,39 @@
     justify-content: flex-end;
 
     li {
-      background: $wc;
-      padding: 18px 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
       margin-bottom: 6px;
       width: 100%;
-      border-radius: 12px;
+      max-width: 400px;
       pointer-events: all;
 
       &:last-child {
         margin-bottom: 0;
       }
+
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
     }
 
     .cancel {
-      background: $bc;
+      height: 40px;
+      background: transparent;
       color: $wc;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      svg {
+        margin-right: 10px;
+      }
+
+      span {
+        text-transform: uppercase;
+        font-weight: 600;
+        font-family: $default-font-2;
+      }
     }
   }
 }
