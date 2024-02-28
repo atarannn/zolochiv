@@ -153,7 +153,7 @@ export default class FormMonster {
           this.watchedState.status = 'loading';
           const formData = new FormData(this.elements.$form);
           formData.append('action', 'app');
-
+          formData.append('url', window.location.href);
           /* eslint-disable-next-line */
           const { error, code_error } = await sendForm(formData);
 
