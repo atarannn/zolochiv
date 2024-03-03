@@ -161,9 +161,9 @@ function paralaxesScreens() {
 }
 paralaxesScreens();
 
-const mainVideo = document.querySelector('[videoForHomePage]');
-
-// Почати відтворення відео після завантаження сторінки
-window.addEventListener('click', () => {
-  mainVideo.play();
-});
+// const mainVideo = document.querySelector('[videoForHomePage]');
+//
+// // Почати відтворення відео після завантаження сторінки
+// window.addEventListener('click', () => {
+//   mainVideo.play();
+// });
