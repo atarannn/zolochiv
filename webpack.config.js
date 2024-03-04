@@ -1,5 +1,7 @@
 const webpack = require('webpack');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
+const TerserPlugin = require("terser-webpack-plugin");
+
 
 const config = {
   mode: process.argv.includes('--production') ? 'production' : 'development',
@@ -26,7 +28,7 @@ const config = {
     },
   },
   plugins: [
-    new UglifyJSPlugin({
+    new TerserPlugin({
       sourceMap: true,
     }),
 
@@ -51,6 +53,8 @@ const config = {
       }
     ],
   },
+
+
 };
 
 module.exports = config;
