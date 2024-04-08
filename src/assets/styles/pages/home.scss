@@ -792,6 +792,7 @@
 
         @include to(680px) {
           opacity: 1;
+          transition: none;
         }
       }
     }
