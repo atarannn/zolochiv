@@ -71,7 +71,7 @@
   &__top {
     display: grid;
     grid-template-columns: repeat(16, 1fr);
-    grid-template-areas: 'nav nav nav nav nav nav nav nav info info info info . . . .';
+    grid-template-areas: 'nav nav nav nav nav nav nav nav info info info info info info . .';
     width: 100%;
 
     @include to(1024px) {

@@ -52,11 +52,11 @@
     .title-96 {
       text-align: center;
       cursor: default;
-      white-space: nowrap;
+      //white-space: nowrap;
 
-      @include to(1024px) {
-        white-space: break-spaces;
-      }
+      //@include to(1024px) {
+      //  white-space: break-spaces;
+      //}
     }
   }
 

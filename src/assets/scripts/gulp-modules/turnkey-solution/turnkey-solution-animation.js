@@ -1,23 +1,23 @@
-function transformAnimation1(selector, $scroller) {
-  document.querySelectorAll(selector).forEach(block => {
-    let tl = gsap
-      .timeline({
-        paused: true,
-        scrollTrigger: {
-          scroller: $scroller || document.body,
-          trigger: '.solution-section-1',
-          start: '80% center',
-          scrub: 2,
-        },
-      })
-      .fromTo(
-        block,
-        { yPercent: -120, },
-        { yPercent: 0, duration: 1, ease: "power4.out" }
-      );
-  });
-}
-transformAnimation1('.solution-section-1 .decor-1');
+// function transformAnimation1(selector, $scroller) {
+//   document.querySelectorAll(selector).forEach(block => {
+//     let tl = gsap
+//       .timeline({
+//         paused: true,
+//         scrollTrigger: {
+//           scroller: $scroller || document.body,
+//           trigger: '.solution-section-1',
+//           start: '80% center',
+//           scrub: 2,
+//         },
+//       })
+//       .fromTo(
+//         block,
+//         { yPercent: -120, },
+//         { yPercent: 0, duration: 1, ease: "power4.out" }
+//       );
+//   });
+// }
+// transformAnimation1('.solution-section-1 .decor-1');
 
 function transformAnimation2(selector, $scroller) {
   document.querySelectorAll(selector).forEach(block => {
