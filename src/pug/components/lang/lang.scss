@@ -44,6 +44,8 @@
         @include to(680px) {
           padding-bottom: 0;
           border-bottom: none;
+
+          color: var(--white);
         }
       }
     }
