@@ -16,13 +16,13 @@ const lang = langDetect();
     lng: lang, // Текущий язык
     debug: true,
     resources: {
-      uk: {
+      ua: {
         translation: {
           name: 'Ім’я:*',
           phone: 'Телефон:*',
           field_too_short: 'Телефон має містити принаймні {{cnt}} символів',
           field_too_long: 'Телефон має містити не більше {{cnt}} символів',
-          only_number: 'Тут лише цифри',
+          only_number: 'Телефон повинен містити лише цифри',
           onlyletters: 'Ім`я повинне містити тільки літери',
           required: 'Це поле є обов`язковим',
           sendingSuccessTitle: 'Повідомлення надіслано',
@@ -46,7 +46,7 @@ const lang = langDetect();
           phone: 'Phone:*',
           field_too_short: 'Phone must be at least {{cnt}} characters',
           field_too_long: 'Phone must be at most {{cnt}} characters',
-          only_number: 'Only digits here',
+          only_number: 'The phone must contain only numbers',
           onlyletters: 'Name must contain only letters',
           required: 'This field is required',
           sendingSuccessTitle: 'Message sent',
@@ -60,6 +60,27 @@ const lang = langDetect();
           invalid_upload_file: 'Error uploading file. Code: [invalid_upload_file] ',
           invalid_recaptcha: 'Please fill in the captcha and try again. Code: [invalid_recaptcha] ',
           connectionFailed: 'Server connection error',
+        },
+      },
+      ru: {
+        translation: {
+          name: 'Имя:*',
+          phone: 'Телефон:*',
+          field_too_short: 'Телефон должен содержать как минимум {{cnt}} символов',
+          field_too_long: 'Телефон должен содержать не более {{cnt}} символов',
+          only_number: 'Телефон должен содержать только цифры',
+          onlyletters: 'Имя должно содержать только буквы',
+          required: 'Это поле является обязательным',
+          sendingSuccessTitle: 'Сообщение отправлено',
+          sendingSuccessText: 'Ожидайте ответа от наших менеджеров',
+          sendingErrorText: 'Возникла ошибка при отправке',
+          sendingErrorTitle: 'Ошибка',
+          send_fail: 'Сообщение не было отправлено из-за неизвестной ошибки сервера. Код: [send_fail]',
+          invalid_form: 'Сообщение не было отправлено из-за неизвестной ошибки сервера. Код: [invalid_form]',
+          front_error: 'Сообщение не было отправлено из-за неизвестной ошибки сервера. Код: [front_error]',
+          invalid_upload_file: 'Ошибка загрузки файла. Код: [invalid_upload_file]',
+          invalid_recaptcha: 'Заполните капчу и попробуйте еще раз. Код: [invalid_recaptcha]',
+          connectionFailed: 'Ошибка соединения с CRM',
         },
       },
     },
