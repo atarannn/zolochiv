@@ -5,13 +5,13 @@
 
   @include to(680px) {
     flex-direction: column;
-    gap: 4px;
+    gap: 2px;
   }
 
   span {
     color: rgba(255, 217, 161, 0.20);
     font-size: var(--font-14);
-    margin: 0 var(--padding-12);
+    margin: 0 8px;
     cursor: default;
 
     @include to(680px) {
